@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher.png",
+        "source": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher_round.png",
+        "source": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+    }
+]
