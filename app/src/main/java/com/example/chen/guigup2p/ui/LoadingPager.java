@@ -119,7 +119,6 @@ public abstract class LoadingPager extends FrameLayout {
             addView(view_success,params);
         }
 
-
         view_success.setVisibility(state_current == STATE_SUCCESS ? View.VISIBLE : View.INVISIBLE);
 
     }
