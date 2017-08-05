@@ -9,5 +9,7 @@
 ### [5.圆形进度条](markdown_note/readme_05.md)
 ### [6.自定义scrollview](markdown_note/readme_06.md)
 
+### [7.抽取BaseFragment](markdown_note/readme_07.md)
 
 
+### [8.LoadingPage](markdown_note/readme_08.md)

@@ -20,7 +20,7 @@ import butterknife.ButterKnife;
  * 1. MyFragment --我的
  */
 
-public class MyFragment extends Fragment {
+public class MyFragment extends BaseFragment {
     @Bind(R.id.iv_top_title_back)
     ImageView ivTopTitleBack;
     @Bind(R.id.tv_top_title_tap)
@@ -30,6 +30,7 @@ public class MyFragment extends Fragment {
     @Bind(R.id.ll_top_title_main)
     LinearLayout llTopTitleMain;
 
+/* 抽取到baseFragment
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -39,12 +40,23 @@ public class MyFragment extends Fragment {
         initTitle();
         return view;
     }
+*/
 
+
+    @Override
+    protected int getLayoutId() {
+        return R.layout.fragment_my;
+    }
+
+    @Override
+    protected void initData() {
+
+    }
 
     /**
      * 1. 初始化标题
      */
-    private void initTitle() {
+    protected void initTitle() {
         tvTopTitleTap.setText("我的");
     }
 

@@ -20,7 +20,7 @@ import butterknife.ButterKnife;
  * 2. InvestFragment --投资
  */
 
-public class InvestFragment extends Fragment {
+public class InvestFragment extends BaseFragment {
     @Bind(R.id.iv_top_title_back)
     ImageView ivTopTitleBack;
     @Bind(R.id.tv_top_title_tap)
@@ -30,7 +30,7 @@ public class InvestFragment extends Fragment {
     @Bind(R.id.ll_top_title_main)
     LinearLayout llTopTitleMain;
 
-    @Nullable
+/*    @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
@@ -38,30 +38,31 @@ public class InvestFragment extends Fragment {
         ButterKnife.bind(this, view);
         initTitle();
         return view;
+    }*/
+
+    @Override
+    protected int getLayoutId() {
+        return R.layout.fragment_invest;
+    }
+
+    @Override
+    protected void initData() {
+
     }
 
     /**
      * 1. 初始化标题
      */
-    private void initTitle() {
+    protected void initTitle() {
         ivTopTitleBack.setVisibility(View.GONE);
         tvTopTitleTap.setText("投资");
         ivTopTitleSetting.setVisibility(View.GONE);
     }
 
-
-
-
-
-
-
-
-
-
-
+/*
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         ButterKnife.unbind(this);
-    }
+    }*/
 }

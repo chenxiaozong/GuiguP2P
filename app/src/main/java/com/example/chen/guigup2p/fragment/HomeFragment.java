@@ -43,7 +43,7 @@ import butterknife.ButterKnife;
  * 1. HomeFragment --首页
  */
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends BaseFragment {
     @Bind(R.id.iv_top_title_back)
     ImageView ivTopTitleBack;
     @Bind(R.id.tv_top_title_tap)
@@ -82,6 +82,8 @@ public class HomeFragment extends Fragment {
     };
 
 
+/*  抽取BaseFragment
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -94,6 +96,11 @@ public class HomeFragment extends Fragment {
 
         initData();
         return view;
+    }*/
+
+    @Override
+    protected int getLayoutId() {
+        return R.layout.fragment_home;
     }
 
     /**
@@ -101,7 +108,7 @@ public class HomeFragment extends Fragment {
      * 1. 使用 android-async-http-master.jar 框架联网
      * 2. 使用app/libs/fastjson-1.2.4.jar 框架解析json数据
      */
-    private void initData() {
+    public void initData() {
         String url = AppNetConfig.INDEX; //首页面url
 
         Log.d("HomeFragment", url);
@@ -119,6 +126,23 @@ public class HomeFragment extends Fragment {
             }
         });
     }
+
+
+    /**
+     * 1. 初始化标题
+     */
+    public void initTitle() {
+        ivTopTitleBack.setVisibility(View.INVISIBLE);
+        tvTopTitleTap.setText("首页");
+        ivTopTitleSetting.setVisibility(View.INVISIBLE);
+    }
+
+
+
+
+
+
+
 
     /**
      * 使用FastJson解析json数据
@@ -205,21 +229,13 @@ public class HomeFragment extends Fragment {
     }
 
 
-    /**
-     * 1. 初始化标题
-     */
-    private void initTitle() {
-        ivTopTitleBack.setVisibility(View.INVISIBLE);
-        tvTopTitleTap.setText("首页");
-        ivTopTitleSetting.setVisibility(View.INVISIBLE);
-    }
 
-
+/* 抽取到baseFragment
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         ButterKnife.unbind(this);
-    }
+    }*/
 
 
     /**

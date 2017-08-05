@@ -48,12 +48,12 @@
         "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/layout/select_dialog_item_material.xml"
     },
     {
-        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
-        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/layout/abc_expanded_menu_layout.xml"
-    },
-    {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/layout/notification_action.xml",
         "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/layout/notification_action.xml"
+    },
+    {
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
+        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/layout/abc_expanded_menu_layout.xml"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/layout/fragment_more.xml",
@@ -116,6 +116,10 @@
         "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/layout/abc_action_mode_bar.xml"
     },
     {
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/layout/page_loading.xml",
+        "source": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/res/layout/page_loading.xml"
+    },
+    {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/layout/notification_template_media_custom.xml",
         "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/layout/notification_template_media_custom.xml"
     },
@@ -126,6 +130,10 @@
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",
         "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/layout/abc_screen_simple.xml"
+    },
+    {
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/layout/page_error.xml",
+        "source": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/res/layout/page_error.xml"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/layout/fragment_invest.xml",
@@ -170,6 +178,10 @@
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
         "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/layout/abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/layout/page_empty.xml",
+        "source": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/res/layout/page_empty.xml"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/layout/activity_main.xml",

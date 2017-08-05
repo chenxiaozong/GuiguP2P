@@ -49,4 +49,27 @@ public class UIUtils {
 
     }
 
+    /**
+     * 保证runnable操作在主线程执行
+     * @param runnable
+     */
+    public static void runOnUiThread(Runnable runnable) {
+        if(isMainThread()) {
+            runnable.run();
+        }else {
+            UIUtils.getHandler().post(runnable);
+        }
+    }
+
+    /**
+     * 判断当前线程是否是主线程
+     * @return
+     */
+    private static boolean isMainThread() {
+        int currentTid = android.os.Process.myTid(); //当前线程ID
+        int mainTid = MyApplication.mainThreadId; //主线程ID
+
+        return  currentTid==mainTid;
+
+    }
 }

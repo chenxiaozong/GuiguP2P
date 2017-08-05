@@ -20,7 +20,7 @@ import butterknife.ButterKnife;
  * 4. MoreFragment --更多
  */
 
-public class MoreFragment extends Fragment {
+public class MoreFragment extends BaseFragment {
     @Bind(R.id.iv_top_title_back)
     ImageView ivTopTitleBack;
     @Bind(R.id.tv_top_title_tap)
@@ -30,6 +30,7 @@ public class MoreFragment extends Fragment {
     @Bind(R.id.ll_top_title_main)
     LinearLayout llTopTitleMain;
 
+/*
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -39,20 +40,31 @@ public class MoreFragment extends Fragment {
         initTitle();
         return view;
     }
+*/
 
+
+    @Override
+    protected int getLayoutId() {
+        return R.layout.fragment_more;
+    }
+
+    @Override
+    protected void initData() {
+
+    }
 
     /**
      * 1. 初始化标题
      */
-    private void initTitle() {
+    protected void initTitle() {
         ivTopTitleBack.setVisibility(View.INVISIBLE);
         tvTopTitleTap.setText("更多");
         ivTopTitleSetting.setVisibility(View.INVISIBLE);
     }
-
+/*
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         ButterKnife.unbind(this);
-    }
+    }*/
 }
