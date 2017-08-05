@@ -6,22 +6,26 @@
     density="mdpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1501918428227"
+    timestamp="1501921119903"
     token="-2651659708858268388"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="82" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="25" />
     <task
         name="verifier"
-        duration="0" />
+        duration="2" />
+
+    <artifact
+        location="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+        type="SPLIT" />
 
     <build
         build-mode="FULL"
@@ -74,15 +78,11 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1501918379840"
+        timestamp="1501921119903"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
     </build>
-    <build
-        build-mode="COLD"
-        timestamp="1501918428227"
-        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

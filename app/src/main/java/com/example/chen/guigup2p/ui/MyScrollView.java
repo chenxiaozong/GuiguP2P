@@ -44,23 +44,62 @@ public class MyScrollView extends ScrollView {
     private Rect normal = new Rect();//记录边界位置的childview 的坐标
 
 
+    private  boolean isAnimationFinished = true; //动画结束后才能继续拖拽
+
+
+    /**
+     * 实现父视图对子视图的触摸事件的拦截
+     * 拦截成功与否，通过返回值表示：ture 成功，flase :拦截失败
+     *
+     * @param ev
+     * @return
+     */
+
+
+    private  int lastX,downX,downY;
+    @Override
+    public boolean onInterceptTouchEvent(MotionEvent ev) {
+        ///return super.onInterceptTouchEvent(ev);
+
+        boolean isIntercept = false;
+        int eventX = (int) ev.getX();
+        int eventY = (int) ev.getY();
+
+        switch (ev.getAction()){
+            case MotionEvent.ACTION_DOWN:
+                lastX = downX  = eventX;
+                lastY = downY = eventY;
+                break;
+
+            case MotionEvent.ACTION_MOVE:
+                int dx = Math.abs(eventX -lastX);
+                int dy = Math.abs(eventY - lastY);
+
+
+                if(dy>dx&&dy>10) {
+                    isIntercept = true;
+                }
+
+                lastY = eventY;
+                lastX = eventX;
+                break;
+        }
+
+        return  isIntercept;
+    }
+
     @Override
     public boolean onTouchEvent(MotionEvent ev) {
-        if (childview == null) {
-
+        if (childview == null&& !isAnimationFinished) {
             return super.onTouchEvent(ev);
-
         }
 
         int eventY = (int) ev.getY();//获取事件坐标
 
         switch (ev.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                Log.d("MyScrollView", "down");
                 lastY = eventY;
-
                 break;
-
 
             case MotionEvent.ACTION_MOVE:
                 Log.d("MyScrollView", "move");
@@ -78,31 +117,37 @@ public class MyScrollView extends ScrollView {
 
 
             case MotionEvent.ACTION_UP:
-                Log.d("MyScrollView", "up");
-                //1. 使用平移动画 还原视图
-                int translateY = childview.getBottom()-normal.bottom;
+                if(isNeedAnimation()) {
+                    Log.d("MyScrollView", "up");
+                    //1. 使用平移动画 还原视图
+                    int translateY = childview.getBottom()-normal.bottom;
 
-                TranslateAnimation translate = new TranslateAnimation(0,0,0,-translateY);
-                translate.setDuration(1000);
-                translate.setAnimationListener(new Animation.AnimationListener() {
-                    @Override
-                    public void onAnimationStart(Animation animation) {
+                    TranslateAnimation translate = new TranslateAnimation(0,0,0,-translateY);
+                    translate.setDuration(500);
+                    translate.setAnimationListener(new Animation.AnimationListener() {
+                        @Override
+                        public void onAnimationStart(Animation animation) {
+                            isAnimationFinished = false;
 
-                    }
+                        }
 
-                    @Override
-                    public void onAnimationEnd(Animation animation) {
-                        childview.clearAnimation();
-                        childview.layout(normal.left,normal.top,normal.right,normal.bottom);
+                        @Override
+                        public void onAnimationEnd(Animation animation) {
+                            isAnimationFinished = true;
+                            childview.clearAnimation();
+                            childview.layout(normal.left,normal.top,normal.right,normal.bottom);
+                            normal.setEmpty();
 
-                    }
+                        }
 
-                    @Override
-                    public void onAnimationRepeat(Animation animation) {
+                        @Override
+                        public void onAnimationRepeat(Animation animation) {
 
-                    }
-                });
-                childview.startAnimation(translate);
+                        }
+                    });
+                    childview.startAnimation(translate);
+                }
+
                 break;
 
 
@@ -111,6 +156,10 @@ public class MyScrollView extends ScrollView {
 
         return super.onTouchEvent(ev);
 
+    }
+
+    private boolean isNeedAnimation() {
+        return  !normal.isEmpty();
     }
 
     /**
