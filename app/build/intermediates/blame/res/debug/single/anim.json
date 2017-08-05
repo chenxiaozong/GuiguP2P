@@ -1,42 +1,42 @@
 [
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",
-        "source": "/Users/chen/.android/build-cache/95651241f4e7282aaa788e3dfb98f3a2027b706f/output/res/anim/abc_grow_fade_in_from_bottom.xml"
+        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/anim/abc_grow_fade_in_from_bottom.xml"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml",
-        "source": "/Users/chen/.android/build-cache/95651241f4e7282aaa788e3dfb98f3a2027b706f/output/res/anim/abc_shrink_fade_out_from_bottom.xml"
+        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/anim/abc_shrink_fade_out_from_bottom.xml"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
-        "source": "/Users/chen/.android/build-cache/95651241f4e7282aaa788e3dfb98f3a2027b706f/output/res/anim/abc_popup_enter.xml"
+        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/anim/abc_popup_enter.xml"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
-        "source": "/Users/chen/.android/build-cache/95651241f4e7282aaa788e3dfb98f3a2027b706f/output/res/anim/abc_slide_in_bottom.xml"
+        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/anim/abc_slide_in_bottom.xml"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
-        "source": "/Users/chen/.android/build-cache/95651241f4e7282aaa788e3dfb98f3a2027b706f/output/res/anim/abc_slide_out_top.xml"
+        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/anim/abc_slide_out_top.xml"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",
-        "source": "/Users/chen/.android/build-cache/95651241f4e7282aaa788e3dfb98f3a2027b706f/output/res/anim/abc_slide_in_top.xml"
+        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/anim/abc_slide_in_top.xml"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
-        "source": "/Users/chen/.android/build-cache/95651241f4e7282aaa788e3dfb98f3a2027b706f/output/res/anim/abc_fade_out.xml"
+        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/anim/abc_fade_out.xml"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
-        "source": "/Users/chen/.android/build-cache/95651241f4e7282aaa788e3dfb98f3a2027b706f/output/res/anim/abc_fade_in.xml"
+        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/anim/abc_fade_in.xml"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml",
-        "source": "/Users/chen/.android/build-cache/95651241f4e7282aaa788e3dfb98f3a2027b706f/output/res/anim/abc_popup_exit.xml"
+        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/anim/abc_popup_exit.xml"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml",
-        "source": "/Users/chen/.android/build-cache/95651241f4e7282aaa788e3dfb98f3a2027b706f/output/res/anim/abc_slide_out_bottom.xml"
+        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/anim/abc_slide_out_bottom.xml"
     }
 ]

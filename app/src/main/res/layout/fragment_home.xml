@@ -8,7 +8,7 @@
 
     <!--home fragment 布局-->
 
-    <ScrollView
+    <com.example.chen.guigup2p.ui.MyScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
@@ -189,6 +189,6 @@
                 android:drawableLeft="@drawable/guarantee_icon"
                 />
         </LinearLayout>
-    </ScrollView>
+    </com.example.chen.guigup2p.ui.MyScrollView>
 
 </LinearLayout>

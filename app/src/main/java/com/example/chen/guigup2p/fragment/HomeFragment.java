@@ -64,6 +64,7 @@ public class HomeFragment extends Fragment {
     Button btFragmentHomeJoin;
 
 
+
     //让圆环动起来
     private int currenProgress;
     private Runnable runable = new Runnable() {
