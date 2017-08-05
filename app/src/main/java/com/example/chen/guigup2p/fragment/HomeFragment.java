@@ -2,6 +2,7 @@ package com.example.chen.guigup2p.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -61,6 +62,23 @@ public class HomeFragment extends Fragment {
     TextView tvFragmentHomeYearrate;
     @Bind(R.id.bt_fragment_home_join)
     Button btFragmentHomeJoin;
+
+
+    //让圆环动起来
+    private int currenProgress;
+    private Runnable runable = new Runnable() {
+        @Override
+        public void run() {
+            diyRoundProgress.setRoundMax(100);
+
+            for (int i=0;i<currenProgress;i++){
+                diyRoundProgress.setRoundProgress(i+1);
+                SystemClock.sleep(10);
+                diyRoundProgress.postInvalidate();//强制重绘
+
+            }
+        }
+    };
 
 
     @Nullable
@@ -129,7 +147,13 @@ public class HomeFragment extends Fragment {
         tvHomeFragmentProduct.setText(indexJson.proInfo.name);
         tvFragmentHomeYearrate.setText(indexJson.proInfo.yearRate + "%");
 
+
+        //使圆环动起来
         diyRoundProgress.setRoundProgress(Float.parseFloat(proInfo.progress));
+        currenProgress = (int) Float.parseFloat(proInfo.progress);
+
+        //启用分线程分段绘制圆环，使圆环动起来
+        new Thread(runable).start();
 
 /*        //5. 设置viewpager
         vpFragmentHome.setAdapter(new ViewPagerAdapter());

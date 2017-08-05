@@ -265,3 +265,41 @@ public class RoundProgress extends View {
 ```
 
 ## 3. 让圆环动起来
+1. 创建分线程
+
+>   com.example.chen.guigup2p.fragment.HomeFragment >  private void parseJsonWithFJ(String content) {...}
+
+```java
+        //启用分线程分段绘制圆环，使圆环动起来
+        new Thread(runable).start();
+```
+
+
+
+2. 根据进度，分段设置圆环进度 强制重绘圆环
+```java
+    //让圆环动起来
+    private int currenProgress;
+    private Runnable runable = new Runnable() {
+        @Override
+        public void run() {
+            diyRoundProgress.setRoundMax(100);
+
+            for (int i=0;i<currenProgress;i++){
+                diyRoundProgress.setRoundProgress(i+1);
+                SystemClock.sleep(10);
+                diyRoundProgress.postInvalidate();//强制重绘
+
+            }
+        }
+    };
+
+```
+
+
+>注意：
+diyRoundProgress.postInvalidate();//强制重绘--分线程主线程都可使用
+diyRoundProgress.Invalidate();//强制重绘--只能在主线程使用
+
+效果：
+![Image Title](../markdown_image/05_3move.gif)

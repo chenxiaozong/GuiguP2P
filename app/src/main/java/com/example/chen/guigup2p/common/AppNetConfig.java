@@ -7,7 +7,7 @@ package com.example.chen.guigup2p.common;
 
 public class AppNetConfig {
 
-        public static final String HOST = "192.168.1.111";//提供ip地址
+        public static final String HOST = "192.168.1.104";//提供ip地址
 
         //提供web应用的地址
         public static final String BASE_URL = "http://" + HOST + ":8080/P2PInvest/";

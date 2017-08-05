@@ -84,7 +84,7 @@ public class RoundProgress extends View {
         roundWidth =  typedArray.getDimension(R.styleable.RoundProgress_roundWidth,40);
 
         roundMax = typedArray.getFloat(R.styleable.RoundProgress_roundMax,100);
-        roundProgress = typedArray.getFloat(R.styleable.RoundProgress_roundProgress,0);
+        roundProgress = typedArray.getFloat(R.styleable.RoundProgress_roundProgress,0);//获取
 
         //3.释放资源数据
         typedArray.recycle();

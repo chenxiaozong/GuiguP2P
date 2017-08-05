@@ -1,10 +1,10 @@
 [
     {
-        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/ViewPagerIndicator/build/intermediates/res/merged/androidTest/debug/drawable/vpi__tab_indicator.xml",
-        "source": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/ViewPagerIndicator/build/intermediates/bundles/debug/res/drawable/vpi__tab_indicator.xml"
-    },
-    {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/D:\\01code\\AS\\GuiguP2P\\ViewPagerIndicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\vpi__tab_indicator.xml",
         "source": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/D:\\01code\\AS\\GuiguP2P\\ViewPagerIndicator\\build\\intermediates\\bundles\\debug\\res\\drawable\\vpi__tab_indicator.xml"
+    },
+    {
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/ViewPagerIndicator/build/intermediates/res/merged/androidTest/debug/drawable/vpi__tab_indicator.xml",
+        "source": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/ViewPagerIndicator/build/intermediates/bundles/debug/res/drawable/vpi__tab_indicator.xml"
     }
 ]
