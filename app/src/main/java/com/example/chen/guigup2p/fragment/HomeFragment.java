@@ -25,6 +25,7 @@ import com.example.chen.guigup2p.common.AppNetConfig;
 import com.example.chen.guigup2p.ui.RoundProgress;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
 import com.squareup.picasso.Picasso;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
@@ -98,17 +99,41 @@ public class HomeFragment extends BaseFragment {
         return view;
     }*/
 
+
+    //设置 网络请求参数
+    @Override
+    protected RequestParams getParams() {
+        return null;
+    }
+
+
+    //设置 网络请求地址
+    @Override
+    protected String getUrl() {
+        String url = AppNetConfig.INDEX; //首页面url
+        return url;
+    }
+
     @Override
     protected int getLayoutId() {
         return R.layout.fragment_home;
+    }
+
+
+    //初始化数据: 根据loadingpage返回的数据
+    @Override
+    protected void initData(String content) {
+
+        parseJsonWithFJ(content);
+
     }
 
     /**
      * 初始化数据:联网获取数据
      * 1. 使用 android-async-http-master.jar 框架联网
      * 2. 使用app/libs/fastjson-1.2.4.jar 框架解析json数据
-     */
-    public void initData() {
+
+    public void initData(String content) {
         String url = AppNetConfig.INDEX; //首页面url
 
         Log.d("HomeFragment", url);
@@ -126,7 +151,7 @@ public class HomeFragment extends BaseFragment {
             }
         });
     }
-
+     */
 
     /**
      * 1. 初始化标题
@@ -136,11 +161,6 @@ public class HomeFragment extends BaseFragment {
         tvTopTitleTap.setText("首页");
         ivTopTitleSetting.setVisibility(View.INVISIBLE);
     }
-
-
-
-
-
 
 
 

@@ -2,9 +2,37 @@
 
 编写loadingpage
 
+# 1. 流程分析
+
+```
+LoadingPage  --->FrameLayout
+
+1.
+state_loading = 1;
+state_error = 2;
+state_empty = 3;
+state_success = 4;
+
+state_current =  1;
+
+2.提供4种不同界面：
+正在加载中
+加载失败
+加载成功，但是数据为空
+加载成功，且有数据
+
+3.根据state_current的值，决定显示哪个界面。
+（初始化时，应该显示：正在加载）
+
+4.在类中，实现联网操作，根据联网的结果，修改state_current的值，决定显示哪个界面。
+
+5.如果是state_current = 4,需要考虑如何将数据传递给具体的Fragment.
+
+```
 
 
-## 1. 创建loadingpager.class 继承FrameLayout
+
+## 1.创建loadingpager.class 继承FrameLayout
 0. 修改构造方法
 1. 定义变量记录四中状态
 2. 提供四中状态对应的视图
@@ -127,7 +155,7 @@ public abstract class LoadingPager extends FrameLayout {
 
 ```
 
-## 2. 修改Uiutils 添加判断是当前进程是否为主进程
+## 2.修改Uiutils 添加判断是当前进程是否为主进程
 ```java
 
     /**
@@ -156,7 +184,7 @@ public abstract class LoadingPager extends FrameLayout {
 
 ```
 
-## 3. 修改baseFragment
+## 3.修改baseFragment
 
 >将：
 
@@ -192,6 +220,313 @@ public abstract class LoadingPager extends FrameLayout {
     }
 ```
 
-## 4. 效果
+> 效果
 ![Image Title](../markdown_image/08_1loading_page.png) 
+
+## 4.在类中，实现联网操作，根据联网的结果，修改state_current的值，决定显示哪个界面。
+
+### 1.初步
+
+>联网请求
+
+```java
+    /**
+     * showe --根据联网请求结果， 确定要显示哪个loadingpage页面
+     * 1. 使用异步联网请求
+     */
+     public void  show(){
+         AsyncHttpClient client = new AsyncHttpClient();
+         client.get(url(),params(),new AsyncHttpResponseHandler(){
+             @Override
+             public void onSuccess(String content) {
+                 //1. 请求成功，内容为空
+                 if(TextUtils.isEmpty(content)) { //content=null或者content=""
+                     state_current = STATE_EMPTY;
+                 }else {
+                     //2. 请求成功，内容不为空
+                     state_current = STATE_SUCCESS;
+                 }
+                 showSafePage();
+             }
+             @Override
+             public void onFailure(Throwable error, String content) {
+                 state_current = STATE_ERR;
+                 showSafePage();// 保证在主线程中执行
+             }
+         });
+     }
+```
+
+> 获取请求参数
+
+```
+    /**
+     * 请求参数
+     * @return
+     */
+    protected abstract RequestParams params();
+```
+
+> 获取请求地址
+
+```
+    /**
+     * 请求地址
+     * @return
+     */
+    protected abstract String url();
+
+```
+
+
+
+### 2.修改：封装请求结果（请求状态，响应内容）
+
+> 使用枚举类封装请求响应 
+
+```java
+
+    /**
+     * 使用枚举类型封装网络请求返回的（数据和状态）
+     */
+    public  enum  ResultState {
+
+        //public  static final ResultState ERROR = new ResultState(2);
+
+        ERROR(2),EMPTY(3),SUCCESS(4);
+        int state;
+        ResultState(int state) {
+            this.state = state;
+        }
+
+        //封装联网响应
+        private  String content;
+
+
+        public int getState() {
+            return state;
+        }
+
+        public void setState(int state) {
+            this.state = state;
+        }
+
+        public String getContent() {
+            return content;
+        }
+
+        public void setContent(String content) {
+            this.content = content;
+        }
+    }
+```
+
+
+> 修改 show() 方法： 使用封装后的resultState 
+
+```java
+    private  ResultState resultState; //封装响应结果
+
+    /**
+     * showe --根据联网请求结果， 确定要显示哪个loadingpage页面
+     * 1. 使用异步联网请求
+     */
+     public void  show(){
+         AsyncHttpClient client = new AsyncHttpClient();
+         client.get(url(),params(),new AsyncHttpResponseHandler(){
+             @Override
+             public void onSuccess(String content) {
+                 //1. 请求成功，内容为空
+                 if(TextUtils.isEmpty(content)) { //content=null或者content=""
+//                     state_current = STATE_EMPTY;
+                     resultState = ResultState.EMPTY;
+                     resultState.setContent("");
+                 }else {
+                     //2. 请求成功，内容不为空
+                     //state_current = STATE_SUCCESS;
+                     resultState = ResultState.SUCCESS;
+                     resultState.setContent(content);
+                 }
+                 //showSafePage();
+                 loadImage();
+             }
+             @Override
+             public void onFailure(Throwable error, String content) {
+                 //state_current = STATE_ERR;
+                 resultState = ResultState.ERROR;//使用枚举类
+                 resultState.setContent("");
+                 showSafePage();// 保证在主线程中执行
+             }
+         });
+
+     }
+```
+
+> loadImage : 
+
+```java
+    /**
+     * 更新state_current 的值
+     *
+     * 根据联网请求后的 > 枚举类的值resultState -> current_state
+     */
+    private void loadImage() {
+        switch (resultState){
+            case ERROR:
+                state_current = STATE_ERR;
+                break;
+            case EMPTY:
+                state_current = STATE_EMPTY;
+
+                break;
+            case SUCCESS:
+                state_current = STATE_SUCCESS;
+                break;
+        }
+
+        showSafePage();//根据修改后的state_current 的值， 更新视图显示
+        //如果state_current = success
+        // > 需要传出联网请求获取的数据 content
+        // > 传出对应的视图view_success
+        if(state_current==STATE_SUCCESS) {
+            onSuccess(resultState,view_success);
+        }
+    }
+```
+
+> 请求响应成功切内容不为空执行以下操作：具体根据fragment而定
+```java
+    protected abstract void onSuccess(ResultState resultState, View view_success);
+```
+
+### 3.BaseFragment 修改
+
+> onCreateView 中： 
+
+```java
+ /**
+         * 使用loadingpage
+         */
+
+        LoadingPager loadingPager = new LoadingPager(container.getContext()) {
+            @Override
+            public int layoutId() {//确定loadingpage要显示的页面
+                return getLayoutId();
+            }
+            //请求成功后执行操作：
+            //1. 返回响应结果（封装在resultState中的content中）
+            //2. 返回对应的要显示的视图（四个fragment对应）
+            @Override
+            protected void onSuccess(ResultState resultState, View view_success) {
+
+                ButterKnife.bind(BaseFragment.this,view_success); //bind ButterKnife
+                initTitle();//初始化标题
+                initData(resultState.getContent()); //初始化数据
+            }
+
+            //联网请求参数
+            @Override
+            protected RequestParams params() {
+                return getParams();
+            }
+
+            //联网请求地址--暴露到具体fragment实现
+            @Override
+            protected String url() {
+                return getUrl();
+            }
+        };
+
+        return  loadingPager;
+
+    }
+
+```
+
+
+
+### 4.HomeFragment 联网获取数据
+
+1. BaseFragment :调用loadingPager的联网操作
+```java
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        loadingShowPage();//调用联网操作
+    }
+
+```
+
+```java
+    /**
+     * 调用loadingPage 的show方法
+     */
+    public  void loadingShowPage(){ //在MainActivity中调用
+        loadingPager.show();
+    }
+```
+
+
+2. LoadingPage :调用show()方法执行联网操作:
+   - 若不需要联网 URL==null 直接返回
+   - 若需要联网 URL!=null 执行联网操作
+
+```java
+    /**
+     * showe --根据联网请求结果， 确定要显示哪个loadingpage页面
+     * 1. 使用异步联网请求
+     */
+     public void  show(){
+         String url = url(); //获取联网操作的url
+         //1. fragment 不需要联网
+         if(TextUtils.isEmpty(url)) {
+             //不需要联网
+             resultState = ResultState.SUCCESS;
+             resultState.setContent("");
+             loadImage();
+             return;
+         }
+         
+/*
+         UIUtils.getHandler().postDelayed(new Runnable() {
+             @Override
+             public void run() {
+                 //若 模拟联网延时,将下列联网操作放到此处
+             }
+         }, 2000);
+*/
+         //2. fragment需要联网
+         AsyncHttpClient client = new AsyncHttpClient();
+         client.get(url(),params(),new AsyncHttpResponseHandler(){
+             @Override
+             public void onSuccess(String content) {
+                 //1. 请求成功，内容为空
+                 if(TextUtils.isEmpty(content)) { //content=null或者content=""
+//                     state_current = STATE_EMPTY;
+                     resultState = ResultState.EMPTY;
+                     resultState.setContent("");
+                 }else {
+                     //2. 请求成功，内容不为空
+                     //state_current = STATE_SUCCESS;
+                     resultState = ResultState.SUCCESS;
+                     resultState.setContent(content);
+                 }
+                 //showSafePage();
+                 loadImage();
+             }
+
+             @Override
+             public void onFailure(Throwable error, String content) {
+                 //state_current = STATE_ERR;
+                 resultState = ResultState.ERROR;//使用枚举类
+                 resultState.setContent("");
+                 //showSafePage();// 保证在主线程中执行
+                 loadImage();
+             }
+         });
+     }
+```
+
+效果:
+![Image Title](../markdown_image/08_2loadingpage.gif) 
 

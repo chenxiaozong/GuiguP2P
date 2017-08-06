@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.chen.guigup2p.R;
+import com.loopj.android.http.RequestParams;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -41,14 +42,26 @@ public class InvestFragment extends BaseFragment {
     }*/
 
     @Override
+    protected RequestParams getParams() {
+        return null;
+    }
+
+    @Override
+    protected String getUrl() {
+        return null;
+    }
+
+    @Override
     protected int getLayoutId() {
         return R.layout.fragment_invest;
     }
 
     @Override
-    protected void initData() {
+    protected void initData(String content) {
 
     }
+
+
 
     /**
      * 1. 初始化标题

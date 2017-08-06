@@ -117,9 +117,10 @@ public class MainActivity extends FragmentActivity {
         FragmentTransaction transation = manager.beginTransaction();
 
         switch (i) {
+
             case 1://显示第一个fragment
                 if (homefragment == null) {
-                    homefragment = new HomeFragment();
+                    homefragment = new HomeFragment();//创建对象后并不会马上调用生命周期方法,而是等commit后才调用生命周期方法
                     transation.add(R.id.fl_main, homefragment);
                 }
                 checkFragment(i, transation);
@@ -158,7 +159,6 @@ public class MainActivity extends FragmentActivity {
 
         }
         transation.commit();
-
         updateButton(i, oldButton);
         //更新索引
         currentfragment = i;
@@ -178,13 +178,13 @@ public class MainActivity extends FragmentActivity {
                 case 1: //隐藏home
                     transation.hide(homefragment);
                     break;
-                case 2: //隐藏home
+                case 2: //隐藏invest
                     transation.hide(investfragment);
                     break;
-                case 3: //隐藏home
+                case 3: //隐藏my
                     transation.hide(myfragment);
                     break;
-                case 4: //隐藏home
+                case 4: //隐藏more
                     transation.hide(morefragment);
                     break;
 

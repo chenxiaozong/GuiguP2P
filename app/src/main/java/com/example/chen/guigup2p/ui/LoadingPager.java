@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.annotation.AttrRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
@@ -12,6 +13,9 @@ import android.widget.FrameLayout;
 
 import com.example.chen.guigup2p.R;
 import com.example.chen.guigup2p.util.UIUtils;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
 
 /**
  * Created by chen on 2017/8/5.
@@ -124,5 +128,167 @@ public abstract class LoadingPager extends FrameLayout {
     }
 
     public  abstract  int layoutId(); //使用抽象方法，为四个不同fragment提供各自的成功的返回页面
+
+
+
+
+    private  ResultState resultState; //封装响应结果
+
+    /**
+     * showe --根据联网请求结果， 确定要显示哪个loadingpage页面
+     * 1. 使用异步联网请求
+     */
+     public void  show(){
+
+         String url = url(); //获取联网操作的url
+
+         //1. fragment 不需要联网
+         if(TextUtils.isEmpty(url)) {
+             //不需要联网
+             resultState = ResultState.SUCCESS;
+             resultState.setContent("");
+
+             loadImage();
+             return;
+         }
+
+         //2. fragment需要联网
+
+
+         UIUtils.getHandler().postDelayed(new Runnable() {
+             @Override
+             public void run() {
+                 //若 模拟联网延时,将下列联网操作放到此处
+
+             }
+         }, 2000);
+
+         //-------------联网操作(开始)-------------
+         AsyncHttpClient client = new AsyncHttpClient();
+         client.get(url(),params(),new AsyncHttpResponseHandler(){
+             @Override
+             public void onSuccess(String content) {
+                 //1. 请求成功，内容为空
+                 if(TextUtils.isEmpty(content)) { //content=null或者content=""
+//                     state_current = STATE_EMPTY;
+                     resultState = ResultState.EMPTY;
+                     resultState.setContent("");
+                 }else {
+                     //2. 请求成功，内容不为空
+                     //state_current = STATE_SUCCESS;
+                     resultState = ResultState.SUCCESS;
+                     resultState.setContent(content);
+                 }
+
+                 //showSafePage();
+                 loadImage();
+
+             }
+
+
+             @Override
+             public void onFailure(Throwable error, String content) {
+                 //state_current = STATE_ERR;
+                 resultState = ResultState.ERROR;//使用枚举类
+                 resultState.setContent("");
+                 //showSafePage();// 保证在主线程中执行
+                 loadImage();
+             }
+         });
+         //-------------联网操作(结束)----------------------------------
+
+     }
+
+    /**
+     * 更新state_current 的值
+     *
+     * 根据联网请求后的 > 枚举类的值resultState -> current_state
+     */
+    private void loadImage() {
+        switch (resultState){
+            case ERROR:
+                state_current = STATE_ERR;
+                break;
+            case EMPTY:
+                state_current = STATE_EMPTY;
+
+                break;
+            case SUCCESS:
+                state_current = STATE_SUCCESS;
+                break;
+        }
+
+        showSafePage();//根据修改后的state_current 的值， 更新视图显示
+
+        //如果state_current = success
+        // > 需要传出联网请求获取的数据 content
+        // > 传出对应的视图view_success
+        if(state_current==STATE_SUCCESS) {
+            onSuccess(resultState,view_success);
+        }
+
+
+    }
+
+    /**
+     * 当联网请求成功 && 得到响应内容 content
+     * 1. 传出resultState.content
+     * 2. 传出响应成功对应的视图： view_success: --根据四个fragment而定
+     * @param resultState
+     * @param view_success
+     */
+    protected abstract void onSuccess(ResultState resultState, View view_success);
+
+    /**
+     * 请求参数
+     * @return
+     */
+    protected abstract RequestParams params();
+
+    /**
+     * 请求地址
+     * @return
+     */
+    protected abstract String url();
+
+
+    /**
+     * 使用枚举类型封装网络请求返回的（数据和状态）
+     */
+    public  enum  ResultState {
+
+        //public  static final ResultState ERROR = new ResultState(2);
+
+        ERROR(2),EMPTY(3),SUCCESS(4);
+        int state;
+        ResultState(int state) {
+            this.state = state;
+        }
+
+        //封装联网响应
+        private  String content;
+
+
+        public int getState() {
+            return state;
+        }
+
+        public void setState(int state) {
+            this.state = state;
+        }
+
+        public String getContent() {
+            return content;
+        }
+
+        public void setContent(String content) {
+            this.content = content;
+        }
+    }
+
+
+
+
+
 
 }
