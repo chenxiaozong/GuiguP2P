@@ -25,6 +25,7 @@ import com.loopj.android.http.RequestParams;
 
 public abstract class LoadingPager extends FrameLayout {
 
+    private  Context mContext;
 
     //记录四中不同的显示状态
     private static final int STATE_LOADING = 1;
@@ -58,6 +59,7 @@ public abstract class LoadingPager extends FrameLayout {
 
     public LoadingPager(@NonNull Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        this.mContext = context;
         Log.d("LoadingPager", "---3");
         init();//初始化视图界面方法
     }
@@ -78,6 +80,7 @@ public abstract class LoadingPager extends FrameLayout {
         if (view_loading == null) {
             //2. 加载布局
             view_loading = UIUtils.getView(R.layout.page_loading);
+
             //3. 添加到framelayout 中
             addView(view_loading, params);//调用framelayout 的addview方法
 
@@ -119,7 +122,11 @@ public abstract class LoadingPager extends FrameLayout {
         view_err.setVisibility(state_current == STATE_ERR ? View.VISIBLE : View.INVISIBLE);
 
         if(view_success == null) {
-            view_success = UIUtils.getView(layoutId()); //因为四个具体fragment返回的成功页面不一样，因此没法具体提供一个view
+            //因为四个具体fragment返回的成功页面不一样，因此没法具体提供一个view
+            view_success = UIUtils.getView(layoutId());
+            ////加载布局使用的时Application
+            view_success = View.inflate(mContext,layoutId(),null);//
+
             addView(view_success,params);
         }
 
@@ -160,8 +167,6 @@ public abstract class LoadingPager extends FrameLayout {
              public void run() {
                  //若 模拟联网延时,将下列联网操作放到此处
 
-             }
-         }, 2000);
 
          //-------------联网操作(开始)-------------
          AsyncHttpClient client = new AsyncHttpClient();
@@ -196,6 +201,9 @@ public abstract class LoadingPager extends FrameLayout {
              }
          });
          //-------------联网操作(结束)----------------------------------
+             }
+         }, 2000);
+
 
      }
 

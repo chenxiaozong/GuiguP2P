@@ -68,6 +68,10 @@
         "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/drawable/abc_btn_check_material.xml"
     },
     {
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/drawable/tab_indicator.xml",
+        "source": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/res/drawable/tab_indicator.xml"
+    },
+    {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_small_material.xml",
         "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/drawable/abc_ratingbar_small_material.xml"
     },
@@ -100,8 +104,16 @@
         "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/drawable/abc_ic_go_search_api_material.xml"
     },
     {
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/drawable/animation_loading.xml",
+        "source": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/res/drawable/animation_loading.xml"
+    },
+    {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_track_material.xml",
         "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/drawable/abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/drawable/selector_tabtext.xml",
+        "source": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/res/drawable/selector_tabtext.xml"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/drawable/abc_ic_clear_material.xml",

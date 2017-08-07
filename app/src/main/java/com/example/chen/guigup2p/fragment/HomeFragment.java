@@ -1,19 +1,13 @@
 package com.example.chen.guigup2p.fragment;
 
 import android.content.Context;
-import android.os.Bundle;
 import android.os.SystemClock;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.util.Log;
-import android.view.LayoutInflater;
+import android.text.TextUtils;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -23,8 +17,6 @@ import com.example.chen.guigup2p.bean.IndexJson;
 import com.example.chen.guigup2p.bean.IndexProInfo;
 import com.example.chen.guigup2p.common.AppNetConfig;
 import com.example.chen.guigup2p.ui.RoundProgress;
-import com.loopj.android.http.AsyncHttpClient;
-import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.squareup.picasso.Picasso;
 import com.youth.banner.Banner;
@@ -37,7 +29,6 @@ import java.util.Arrays;
 import java.util.List;
 
 import butterknife.Bind;
-import butterknife.ButterKnife;
 
 /**
  * Created by chen on 2017/4/11.
@@ -45,6 +36,7 @@ import butterknife.ButterKnife;
  */
 
 public class HomeFragment extends BaseFragment {
+
     @Bind(R.id.iv_top_title_back)
     ImageView ivTopTitleBack;
     @Bind(R.id.tv_top_title_tap)
@@ -172,33 +164,36 @@ public class HomeFragment extends BaseFragment {
     private IndexJson indexJson;
 
     private void parseJsonWithFJ(String content) {
-        //创建bean对象
-        indexJson = new IndexJson();
-
-        JSONObject jsonObject = JSON.parseObject(content);
-        String strProInfo = jsonObject.getString("proInfo");
-        //1. 解析proinfo 对象
-        IndexProInfo proInfo = JSON.parseObject(strProInfo, IndexProInfo.class);
-
-        //2. 解析image数组
-        String strImageArr = jsonObject.getString("imageArr");
-        List<IndexImage> imageArr = JSON.parseArray(strImageArr, IndexImage.class);
-
-        //3. 封装到indexbean对象中
-        indexJson.proInfo = proInfo;
-        indexJson.imageArr = imageArr;
-
-        //4. 更新页面数据
-        tvHomeFragmentProduct.setText(indexJson.proInfo.name);
-        tvFragmentHomeYearrate.setText(indexJson.proInfo.yearRate + "%");
+        if(!TextUtils.isEmpty(content)) {//返回数据不为空 则解析
 
 
-        //使圆环动起来
-        diyRoundProgress.setRoundProgress(Float.parseFloat(proInfo.progress));
-        currenProgress = (int) Float.parseFloat(proInfo.progress);
+            //创建bean对象
+            indexJson = new IndexJson();
 
-        //启用分线程分段绘制圆环，使圆环动起来
-        new Thread(runable).start();
+            JSONObject jsonObject = JSON.parseObject(content);
+            String strProInfo = jsonObject.getString("proInfo");
+            //1. 解析proinfo 对象
+            IndexProInfo proInfo = JSON.parseObject(strProInfo, IndexProInfo.class);
+
+            //2. 解析image数组
+            String strImageArr = jsonObject.getString("imageArr");
+            List<IndexImage> imageArr = JSON.parseArray(strImageArr, IndexImage.class);
+
+            //3. 封装到indexbean对象中
+            indexJson.proInfo = proInfo;
+            indexJson.imageArr = imageArr;
+
+            //4. 更新页面数据
+            tvHomeFragmentProduct.setText(indexJson.proInfo.name);
+            tvFragmentHomeYearrate.setText(indexJson.proInfo.yearRate + "%");
+
+
+            //使圆环动起来
+            diyRoundProgress.setRoundProgress(Float.parseFloat(proInfo.progress));
+            currenProgress = (int) Float.parseFloat(proInfo.progress);
+
+            //启用分线程分段绘制圆环，使圆环动起来
+            new Thread(runable).start();
 
 /*        //5. 设置viewpager
         vpFragmentHome.setAdapter(new ViewPagerAdapter());
@@ -207,8 +202,10 @@ public class HomeFragment extends BaseFragment {
 
         vpiHomeIndicator.setViewPager(vpFragmentHome);*/
 
-        //7.设置banner
-        setBanner(2); //int  1: 精简  2: 详细
+            //7.设置banner
+            setBanner(2); //int  1: 精简  2: 详细
+
+        }
     }
 
     /**

@@ -43,8 +43,9 @@
 
 
 
-        <activity android:name=".MainActivity">
-
+        <activity android:name=".MainActivity"
+            android:theme="@style/StyledIndicators"
+            >
         </activity>
 
         <!--启动页面-->

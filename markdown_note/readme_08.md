@@ -530,3 +530,79 @@ public abstract class LoadingPager extends FrameLayout {
 效果:
 ![Image Title](../markdown_image/08_2loadingpage.gif) 
 
+
+
+# 2.LoadingPager流程分析
+
+> 分析 
+
+![Image Title](../markdown_image/08_3an_loadingpage.png) 
+
+# 3. 自定义加载动画
+
+1. 创建drawable 文件夹并创建animation_loading 的drawable动画,selection : animation-list
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list
+    android:oneshot="false"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<item android:drawable="@drawable/wc_ac_01" android:duration="30"/>
+<item android:drawable="@drawable/wc_ac_02" android:duration="30"/>
+<item android:drawable="@drawable/wc_ac_03" android:duration="30"/>
+<item android:drawable="@drawable/wc_ac_04" android:duration="30"/>
+<item android:drawable="@drawable/wc_ac_05" android:duration="30"/>
+<item android:drawable="@drawable/wc_ac_06" android:duration="30"/>
+<item android:drawable="@drawable/wc_ac_07" android:duration="30"/>
+<item android:drawable="@drawable/wc_ac_08" android:duration="30"/>
+<item android:drawable="@drawable/wc_ac_09" android:duration="30"/>
+<item android:drawable="@drawable/wc_ac_10" android:duration="30"/>
+<item android:drawable="@drawable/wc_ac_11" android:duration="30"/>
+<item android:drawable="@drawable/wc_ac_12" android:duration="30"/>
+<item android:drawable="@drawable/wc_ac_13" android:duration="30"/>
+<item android:drawable="@drawable/wc_ac_14" android:duration="30"/>
+<item android:drawable="@drawable/wc_ac_15" android:duration="30"/>
+<item android:drawable="@drawable/wc_ac_16" android:duration="30"/>
+
+</animation-list>
+
+Multi-line Code
+```
+
+
+2. 修改layout/page_loading.xml
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:gravity="center"
+              android:layout_height="match_parent">
+
+    <ProgressBar
+        android:layout_width="100dp"
+        android:layout_height="110dp"
+        android:indeterminateDrawable="@drawable/animation_loading" //使用自定义animation
+        style="?android:progressBarStyleInverse"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:text="努力加载中...."/>
+
+</LinearLayout>
+```
+
+> 效果:
+
+![Image Title](../markdown_image/08_4animation.png) 
+
+
+

@@ -8,14 +8,14 @@ import butterknife.ButterKnife.ViewBinder;
 public class SplashActivity$$ViewBinder<T extends com.example.chen.guigup2p.activity.SplashActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131492970, "field 'tvSplashName'");
-    target.tvSplashName = finder.castView(view, 2131492970, "field 'tvSplashName'");
-    view = finder.findRequiredView(source, 2131492971, "field 'ivSplashIcon'");
-    target.ivSplashIcon = finder.castView(view, 2131492971, "field 'ivSplashIcon'");
-    view = finder.findRequiredView(source, 2131492972, "field 'tvSplashVersion'");
-    target.tvSplashVersion = finder.castView(view, 2131492972, "field 'tvSplashVersion'");
-    view = finder.findRequiredView(source, 2131492969, "field 'rlWelcome'");
-    target.rlWelcome = finder.castView(view, 2131492969, "field 'rlWelcome'");
+    view = finder.findRequiredView(source, 2131558506, "field 'tvSplashName'");
+    target.tvSplashName = finder.castView(view, 2131558506, "field 'tvSplashName'");
+    view = finder.findRequiredView(source, 2131558507, "field 'ivSplashIcon'");
+    target.ivSplashIcon = finder.castView(view, 2131558507, "field 'ivSplashIcon'");
+    view = finder.findRequiredView(source, 2131558508, "field 'tvSplashVersion'");
+    target.tvSplashVersion = finder.castView(view, 2131558508, "field 'tvSplashVersion'");
+    view = finder.findRequiredView(source, 2131558505, "field 'rlWelcome'");
+    target.rlWelcome = finder.castView(view, 2131558505, "field 'rlWelcome'");
   }
 
   @Override public void unbind(T target) {

@@ -42,7 +42,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.chen.guigup2p.MainActivity" >
+        <activity
+            android:name="com.example.chen.guigup2p.MainActivity"
+            android:theme="@style/StyledIndicators" >
         </activity>
 
         <!-- 启动页面 -->

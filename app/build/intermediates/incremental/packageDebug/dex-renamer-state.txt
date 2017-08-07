@@ -1,4 +1,4 @@
-#Sat Aug 05 20:02:01 CST 2017
+#Mon Aug 07 11:15:24 CST 2017
 base.0=/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_9e9219b816bb4572f3ed09a0ca584d97eb53419c
 renamed.1=classes2.dex
 renamed.0=classes.dex

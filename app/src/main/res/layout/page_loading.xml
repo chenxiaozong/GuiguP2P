@@ -5,12 +5,12 @@
               android:gravity="center"
               android:layout_height="match_parent">
 
-        <!--android:indeterminateDrawable="@drawable/page_loading"
-        style="?android:progressBarStyleInverse"
-        -->
     <ProgressBar
         android:layout_width="100dp"
         android:layout_height="110dp"
+        android:indeterminateDrawable="@drawable/animation_loading"
+        style="?android:progressBarStyleInverse"
+
         />
 
     <TextView

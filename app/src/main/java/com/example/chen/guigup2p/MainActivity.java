@@ -26,6 +26,7 @@ import butterknife.OnClick;
 
 public class MainActivity extends FragmentActivity {
 
+
     @Bind(R.id.fl_main)
     FrameLayout flMain;
 
@@ -52,6 +53,8 @@ public class MainActivity extends FragmentActivity {
 
     @Bind(R.id.ll_main_more)
     LinearLayout llMainMore;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
