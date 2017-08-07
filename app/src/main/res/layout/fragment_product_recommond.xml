@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
     </com.example.chen.guigup2p.ui.randomLayout.StellarMap>
 
 </LinearLayout>

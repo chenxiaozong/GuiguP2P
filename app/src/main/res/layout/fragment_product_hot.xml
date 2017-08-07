@@ -3,8 +3,74 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:text="热门理财"
+
+    <com.example.chen.guigup2p.ui.flowlayout.FlowLayout
+        android:id="@+id/flow_hot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<!--
+        <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="你是我心内的一首歌"
+        android:layout_margin="10dp"
+        android:textSize="20sp" />
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="涛声依旧"
+        android:layout_margin="10dp"
+        android:textSize="20sp" />
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="夜夜"
+        android:layout_margin="10dp"
+        android:textSize="20sp" />
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="月落乌啼霜满天"
+        android:layout_margin="10dp"
+        android:textSize="20sp" />
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="哇塞"
+        android:layout_margin="10dp"
+        android:textSize="20sp" />
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="word天哪"
+        android:layout_margin="10dp"
+        android:textSize="20sp" />
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="你咋不上天呢"
+        android:layout_margin="10dp"
+        android:textSize="20sp" />
+
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="你想怎样"
+        android:layout_margin="10dp"
+        android:textSize="20sp" />
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="夜曲"
+        android:layout_margin="10dp"
+        android:textSize="20sp" />-->
+    </com.example.chen.guigup2p.ui.flowlayout.FlowLayout>
 </LinearLayout>

@@ -136,6 +136,10 @@
         "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
     },
     {
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/drawable/hot_product_shap.xml",
+        "source": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/res/drawable/hot_product_shap.xml"
+    },
+    {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/drawable/notification_bg.xml",
         "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/drawable/notification_bg.xml"
     },
