@@ -1,11 +1,22 @@
 package com.example.chen.guigup2p.fragment.invest;
 
+import android.util.Log;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.JSONPObject;
 import com.example.chen.guigup2p.R;
+import com.example.chen.guigup2p.adapter.ProductAdapter;
+import com.example.chen.guigup2p.bean.Product;
+import com.example.chen.guigup2p.common.AppNetConfig;
 import com.example.chen.guigup2p.fragment.BaseFragment;
 import com.loopj.android.http.RequestParams;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.Bind;
 
@@ -23,6 +34,10 @@ public class ProductListFragment extends BaseFragment {
     ListView lv_productlist;
 
 
+
+    //理财产品list
+    private List<Product> productslist = new ArrayList<>();
+
     @Override
     protected RequestParams getParams() {
         return null;
@@ -30,7 +45,7 @@ public class ProductListFragment extends BaseFragment {
 
     @Override
     protected String getUrl() {
-        return null;
+        return AppNetConfig.PRODUCT;
     }
 
     @Override
@@ -49,6 +64,25 @@ public class ProductListFragment extends BaseFragment {
 
 
         //2. 使用自定义MarQuenTextView
+        
+        
+        
+        //3. 解析联网请求的数据
+
+        JSONObject jsonObject = JSON.parseObject(content);
+
+        Boolean success = jsonObject.getBoolean("success");
+
+        if(success) {//获取数据成功
+            String data = jsonObject.getString("data");
+            productslist = JSON.parseArray(data,Product.class);
+
+            //为listvie 设置adapter
+            lv_productlist.setAdapter(new ProductAdapter(productslist));
+
+        }
+        
+        
     }
 
     @Override

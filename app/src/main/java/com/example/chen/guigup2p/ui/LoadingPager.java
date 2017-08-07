@@ -166,6 +166,8 @@ public abstract class LoadingPager extends FrameLayout {
              @Override
              public void run() {
                  //若 模拟联网延时,将下列联网操作放到此处
+             }
+         }, 2000);
 
 
          //-------------联网操作(开始)-------------
@@ -201,8 +203,6 @@ public abstract class LoadingPager extends FrameLayout {
              }
          });
          //-------------联网操作(结束)----------------------------------
-             }
-         }, 2000);
 
 
      }

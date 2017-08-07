@@ -216,6 +216,10 @@
         "source": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/res/layout/top_title_main.xml"
     },
     {
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/layout/item_product_list.xml",
+        "source": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/res/layout/item_product_list.xml"
+    },
+    {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
         "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/layout/abc_action_bar_up_container.xml"
     }

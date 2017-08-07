@@ -8,14 +8,14 @@ import butterknife.ButterKnife.ViewBinder;
 public class MyFragment$$ViewBinder<T extends com.example.chen.guigup2p.fragment.MyFragment> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131558558, "field 'ivTopTitleBack'");
-    target.ivTopTitleBack = finder.castView(view, 2131558558, "field 'ivTopTitleBack'");
-    view = finder.findRequiredView(source, 2131558559, "field 'tvTopTitleTap'");
-    target.tvTopTitleTap = finder.castView(view, 2131558559, "field 'tvTopTitleTap'");
-    view = finder.findRequiredView(source, 2131558560, "field 'ivTopTitleSetting'");
-    target.ivTopTitleSetting = finder.castView(view, 2131558560, "field 'ivTopTitleSetting'");
-    view = finder.findRequiredView(source, 2131558557, "field 'llTopTitleMain'");
-    target.llTopTitleMain = finder.castView(view, 2131558557, "field 'llTopTitleMain'");
+    view = finder.findRequiredView(source, 2131558565, "field 'ivTopTitleBack'");
+    target.ivTopTitleBack = finder.castView(view, 2131558565, "field 'ivTopTitleBack'");
+    view = finder.findRequiredView(source, 2131558566, "field 'tvTopTitleTap'");
+    target.tvTopTitleTap = finder.castView(view, 2131558566, "field 'tvTopTitleTap'");
+    view = finder.findRequiredView(source, 2131558567, "field 'ivTopTitleSetting'");
+    target.ivTopTitleSetting = finder.castView(view, 2131558567, "field 'ivTopTitleSetting'");
+    view = finder.findRequiredView(source, 2131558564, "field 'llTopTitleMain'");
+    target.llTopTitleMain = finder.castView(view, 2131558564, "field 'llTopTitleMain'");
   }
 
   @Override public void unbind(T target) {
