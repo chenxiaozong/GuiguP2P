@@ -10,6 +10,8 @@ import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.JSONPObject;
 import com.example.chen.guigup2p.R;
 import com.example.chen.guigup2p.adapter.ProductAdapter;
+import com.example.chen.guigup2p.adapter.ProductAdapter1;
+import com.example.chen.guigup2p.adapter.ProductAdapter2;
 import com.example.chen.guigup2p.bean.Product;
 import com.example.chen.guigup2p.common.AppNetConfig;
 import com.example.chen.guigup2p.fragment.BaseFragment;
@@ -66,7 +68,6 @@ public class ProductListFragment extends BaseFragment {
         //2. 使用自定义MarQuenTextView
         
         
-        
         //3. 解析联网请求的数据
 
         JSONObject jsonObject = JSON.parseObject(content);
@@ -77,8 +78,17 @@ public class ProductListFragment extends BaseFragment {
             String data = jsonObject.getString("data");
             productslist = JSON.parseArray(data,Product.class);
 
-            //为listvie 设置adapter
-            lv_productlist.setAdapter(new ProductAdapter(productslist));
+            //第一种方式:为listvie 设置adapter
+            //lv_productlist.setAdapter(new ProductAdapter(productslist));
+
+
+            //第二种方式: 抽取baseAdapter
+            ProductAdapter1  adapter1 = new ProductAdapter1(productslist);
+            lv_productlist.setAdapter(adapter1);
+
+            //方式三：抽取了，最好的方式.（可以作为选择）
+            ProductAdapter2 productAdapter2 = new ProductAdapter2(productslist);
+            lv_productlist.setAdapter(productAdapter2);//显示列表
 
         }
         

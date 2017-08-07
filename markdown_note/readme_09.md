@@ -589,8 +589,319 @@ Multi-line Code
 
 
 
+# 3. 抽取Adapter
+
+## 1. 方式一 :抽取Adapter 但是抽取力度小
+
+### 1. 创建MyBaseAdapter1 继承BaseAdapter
+
+> 注意:
+- MyBaseAdapter1<T>   :T 代表不同数据类型
+- public List<T> list;
+- getView() 提供抽象方法,实现不同adapter加载不同视图
 
 
+```java
+
+public abstract class MyBaseAdapter1<T> extends BaseAdapter {
+    public List<T> list;
+
+    public MyBaseAdapter1(List<T> list) {
+        this.list = list;
+    }
+
+    @Override
+    public int getCount() {
+        return list==null?0:list.size();
+
+    }
+
+    @Override
+    public Object getItem(int i) {
+        return list.get(i);
+    }
+
+    @Override
+    public long getItemId(int i) {
+        return i;
+    }
+
+    @Override
+    public View getView(int i, View view, ViewGroup viewGroup) {
+        View convertView = setMyView(i, view, viewGroup);
+        return convertView;
+    }
+
+    //抽象方法,根据不同list数据继承者重写
+    public abstract View setMyView(int i, View view, ViewGroup viewGroup);
+}
+Multi-line Code
+```
+
+
+### 2. 创建ProductAdapter1 继承MyBaseAdapter(抽取的adapter)
+
+> 只需要重写 
+
+- setMyView(int i, View view, ViewGroup viewGroup) 
+- ProductAdapter1
+- viewHolder 
+
+```java
+
+public class ProductAdapter1 extends  MyBaseAdapter1<Product> {
+
+    public ProductAdapter1(List<Product> list) {
+        super(list);
+    }
+    @Override
+    public View setMyView(int i, View view, ViewGroup viewGroup) {
+        ProductAdapter.ViewHolder viewHolder ;
+
+
+        //1. 获取view
+        if(view==null) {
+            view = View.inflate(viewGroup.getContext(),R.layout.item_product_list,null);
+
+            viewHolder = new ProductAdapter.ViewHolder(view);
+            view.setTag(viewHolder);
+
+        }else {
+            viewHolder = (ProductAdapter.ViewHolder) view.getTag();
+        }
+
+        //2. 装配数据
+        Product product = list.get(i);
+
+        viewHolder.pMinnum.setText(product.memberNum);
+        viewHolder.pMinzouzi.setText(product.minTouMoney);
+        viewHolder.pMoney.setText(product.money);
+        viewHolder.pName.setText(product.name);
+
+        float roundProgress = Float.parseFloat(product.progress);
+        viewHolder.pProgresss.setRoundProgress(roundProgress);
+        viewHolder.pSuodingdays.setText(product.suodingDays);
+        viewHolder.pYearlv.setText(product.yearRate);
+
+        return view;
+    }
+
+    static class ViewHolder {
+        @Bind(R.id.p_name)
+        TextView pName;
+        @Bind(R.id.p_money)
+        TextView pMoney;
+        @Bind(R.id.p_yearlv)
+        TextView pYearlv;
+        @Bind(R.id.p_suodingdays)
+        TextView pSuodingdays;
+        @Bind(R.id.p_minzouzi)
+        TextView pMinzouzi;
+        @Bind(R.id.p_minnum)
+        TextView pMinnum;
+        @Bind(R.id.p_progresss)
+        RoundProgress pProgresss;
+
+        ViewHolder(View view) {
+            ButterKnife.bind(this, view);
+        }
+    }
+}
+Multi-line Code
+```
+
+
+### 3. ProductListFragment 中的initDate 为listview 设置adapter
+
+```java
+            ProductAdapter1  adapter1 = new ProductAdapter1(productslist);
+            lv_productlist.setAdapter(adapter1);
+```
+
+
+
+## 2. 方式二: 抽取holder和adapter
+
+### 1. 创建BaseAdapter 和BaseHolder()
+
+> 创建BaseAdapter (MyBaseAdapter2)
+
+```java
+/**
+ * Created by chen on 2017/8/7.
+ * 抽取方法2 :抽取adapter和holder
+ *
+ */
+
+public abstract class MyBaseAdapter2<T> extends  BaseAdapter{
+
+
+    public List<T> list ;
+
+    public MyBaseAdapter2(List<T> list) {
+        this.list = list;
+    }
+
+    @Override
+    public int getCount() {
+        return list==null?0:list.size();
+    }
+
+    @Override
+    public Object getItem(int i) {
+        return list.get(i);
+    }
+
+    @Override
+    public long getItemId(int i) {
+        return i;
+    }
+
+
+    //将具体的集合数据装配到具体的一个item layout中
+    //问题一：item layout的布局是不确定的。
+    //问题二：将集合中指定位置的数据装配到item，是不确定的。
+    @Override
+    public View getView(int i, View view, ViewGroup viewGroup) {
+
+
+        BaseHolder holder ;
+
+        if(view==null) {
+            holder =getHolder();
+        }else {
+            holder = (BaseHolder) view.getTag();
+        }
+        //装配数据
+        T t = list.get(i);
+        holder.setData(t);
+        //返回视图
+        return holder.getRootView();
+    }
+    public abstract BaseHolder getHolder() ;
+}
+```
+
+
+> 创建BaseHolder 
+
+```java
+abstract class BaseHolder<T> {
+
+
+    private View rootView;
+
+    private T data;
+
+    public BaseHolder(){
+        rootView = initView();
+        rootView.setTag(this);
+        ButterKnife.bind(this,rootView);
+    }
+
+    //提供item的布局
+    protected abstract View initView();
+
+    public T getData() {
+        return data;
+    }
+
+    public void setData(T data) {
+        this.data = data;
+        refreshData();
+    }
+    //装配过程: 不同视图不一样,需要抽象方法
+    protected abstract void refreshData();
+
+    public View getRootView() {
+        return rootView;
+    }
+
+}
+
+Multi-line Code
+```
+
+### 2. 创建Product 对应的holder和adapter 继承上列baseholder 和baseAdapter
+
+> MyProductHolder
+
+```java
+public class MyProductHolder extends BaseHolder<Product> {
+
+    @Bind(R.id.p_name)
+    TextView pName;
+    @Bind(R.id.p_money)
+    TextView pMoney;
+    @Bind(R.id.p_yearlv)
+    TextView pYearlv;
+    @Bind(R.id.p_suodingdays)
+    TextView pSuodingdays;
+    @Bind(R.id.p_minzouzi)
+    TextView pMinzouzi;
+    @Bind(R.id.p_minnum)
+    TextView pMinnum;
+    @Bind(R.id.p_progresss)
+    RoundProgress pProgresss;
+
+
+    @Override
+    protected View initView() {
+        View view  = View.inflate(UIUtils.getContext(), R.layout.item_product_list,null);
+
+        return view;
+
+    }
+
+    @Override
+    protected void refreshData() {
+        Product data = this.getData();
+
+        //装数据
+        pMinnum.setText(data.memberNum);
+        pMinzouzi.setText(data.minTouMoney);
+        pMoney.setText(data.money);
+        pName.setText(data.name);
+        pProgresss.setRoundProgress(Float.parseFloat(data.progress));
+        pSuodingdays.setText(data.suodingDays);
+        pYearlv.setText(data.yearRate);
+
+    }
+}
+
+
+Multi-line Code
+```
+
+> MyProductAdapter
+
+```java
+/**
+ * Created by chen on 2017/8/7.
+ */
+
+public class ProductAdapter2 extends MyBaseAdapter2<Product> {
+
+    public ProductAdapter2(List<Product> list) {
+        super(list);
+    }
+
+    @Override
+    public BaseHolder getHolder() {
+        return new MyProductHolder();
+    }
+}
+```
+
+### 3. ProductListFragment 中的initDate 为listview 设置adapter
+> initData() 中为listview 设置adapter
+
+```java
+
+            //方式三：抽取了，最好的方式.（可以作为选择）
+            ProductAdapter2 productAdapter2 = new ProductAdapter2(productslist);
+            lv_productlist.setAdapter(productAdapter2);//显示列表
+```
 
 
 
