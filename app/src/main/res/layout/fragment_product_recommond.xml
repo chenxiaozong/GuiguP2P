@@ -5,8 +5,11 @@
     android:layout_height="match_parent">
 
 
-    <TextView
-        android:text="推荐理财"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <com.example.chen.guigup2p.ui.randomLayout.StellarMap
+        android:id="@+id/stallar_map_product_recommod"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.example.chen.guigup2p.ui.randomLayout.StellarMap>
+
 </LinearLayout>

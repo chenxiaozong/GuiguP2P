@@ -3,6 +3,7 @@ package com.example.chen.guigup2p.util;
 import android.content.Context;
 import android.os.Handler;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.chen.guigup2p.common.MyApplication;
 
@@ -71,5 +72,12 @@ public class UIUtils {
 
         return  currentTid==mainTid;
 
+    }
+
+
+
+    //toas工具
+    public static void toast(String message,boolean isLengthLong){
+        Toast.makeText(UIUtils.getContext(), message,isLengthLong? Toast.LENGTH_LONG : Toast.LENGTH_SHORT).show();
     }
 }
