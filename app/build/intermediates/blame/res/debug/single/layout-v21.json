@@ -1,18 +1,18 @@
 [
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
-        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/layout-v21/notification_template_custom_big.xml"
+        "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/layout-v21/notification_template_custom_big.xml"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
-        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/layout-v21/notification_action_tombstone.xml"
+        "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/layout-v21/notification_action_tombstone.xml"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
-        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/layout-v21/notification_action.xml"
+        "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/layout-v21/notification_action.xml"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
-        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/layout-v21/notification_template_icon_group.xml"
+        "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/layout-v21/notification_template_icon_group.xml"
     }
 ]

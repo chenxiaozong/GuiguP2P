@@ -1,42 +1,58 @@
 [
     {
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/anim/design_bottom_sheet_slide_in.xml",
+        "source": "/Users/chen/.android/build-cache/cc1c58d8448a4cb3b27659fd7837b9cc3cce5dfb/output/res/anim/design_bottom_sheet_slide_in.xml"
+    },
+    {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",
-        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/anim/abc_grow_fade_in_from_bottom.xml"
+        "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/anim/abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/anim/design_snackbar_out.xml",
+        "source": "/Users/chen/.android/build-cache/cc1c58d8448a4cb3b27659fd7837b9cc3cce5dfb/output/res/anim/design_snackbar_out.xml"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml",
-        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/anim/abc_shrink_fade_out_from_bottom.xml"
+        "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/anim/abc_shrink_fade_out_from_bottom.xml"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
-        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/anim/abc_popup_enter.xml"
+        "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/anim/abc_popup_enter.xml"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
-        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/anim/abc_slide_in_bottom.xml"
+        "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/anim/abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/anim/design_bottom_sheet_slide_out.xml",
+        "source": "/Users/chen/.android/build-cache/cc1c58d8448a4cb3b27659fd7837b9cc3cce5dfb/output/res/anim/design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/anim/design_snackbar_in.xml",
+        "source": "/Users/chen/.android/build-cache/cc1c58d8448a4cb3b27659fd7837b9cc3cce5dfb/output/res/anim/design_snackbar_in.xml"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
-        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/anim/abc_slide_out_top.xml"
+        "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/anim/abc_slide_out_top.xml"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",
-        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/anim/abc_slide_in_top.xml"
+        "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/anim/abc_slide_in_top.xml"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
-        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/anim/abc_fade_out.xml"
+        "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/anim/abc_fade_out.xml"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
-        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/anim/abc_fade_in.xml"
+        "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/anim/abc_fade_in.xml"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml",
-        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/anim/abc_popup_exit.xml"
+        "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/anim/abc_popup_exit.xml"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml",
-        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/anim/abc_slide_out_bottom.xml"
+        "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/anim/abc_slide_out_bottom.xml"
     }
 ]

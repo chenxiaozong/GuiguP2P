@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_dark.xml",
-        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/color/abc_hint_foreground_material_dark.xml"
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml",
+        "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/color/abc_primary_text_material_dark.xml"
     },
     {
-        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml",
-        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/color/abc_primary_text_material_dark.xml"
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/color/design_tint_password_toggle.xml",
+        "source": "/Users/chen/.android/build-cache/cc1c58d8448a4cb3b27659fd7837b9cc3cce5dfb/output/res/color/design_tint_password_toggle.xml"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/color/vpi__light_theme.xml",
@@ -13,78 +13,86 @@
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/color/abc_btn_colored_borderless_text_material.xml",
-        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/color/abc_btn_colored_borderless_text_material.xml"
-    },
-    {
-        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/color/switch_thumb_material_dark.xml",
-        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/color/switch_thumb_material_dark.xml"
-    },
-    {
-        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/color/abc_tint_btn_checkable.xml",
-        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/color/abc_tint_btn_checkable.xml"
-    },
-    {
-        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/color/abc_tint_switch_track.xml",
-        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/color/abc_tint_switch_track.xml"
+        "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/color/abc_btn_colored_borderless_text_material.xml"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/color/switch_thumb_material_light.xml",
-        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/color/switch_thumb_material_light.xml"
+        "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/color/switch_thumb_material_light.xml"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml",
-        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/color/abc_primary_text_material_light.xml"
+        "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/color/abc_primary_text_material_light.xml"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml",
-        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/color/abc_primary_text_disable_only_material_dark.xml"
+        "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/color/abc_primary_text_disable_only_material_dark.xml"
     },
     {
-        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_dark.xml",
-        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/color/abc_secondary_text_material_dark.xml"
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/color/design_error.xml",
+        "source": "/Users/chen/.android/build-cache/cc1c58d8448a4cb3b27659fd7837b9cc3cce5dfb/output/res/color/design_error.xml"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/color/abc_btn_colored_text_material.xml",
-        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/color/abc_btn_colored_text_material.xml"
-    },
-    {
-        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml",
-        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/color/abc_primary_text_disable_only_material_light.xml"
+        "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/color/abc_btn_colored_text_material.xml"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/color/abc_tint_edittext.xml",
-        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/color/abc_tint_edittext.xml"
+        "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/color/abc_tint_edittext.xml"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/color/abc_tint_default.xml",
-        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/color/abc_tint_default.xml"
-    },
-    {
-        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/color/abc_tint_switch_thumb.xml",
-        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/color/abc_tint_switch_thumb.xml"
-    },
-    {
-        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_light.xml",
-        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/color/abc_secondary_text_material_light.xml"
+        "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/color/abc_tint_default.xml"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/color/vpi__dark_theme.xml",
         "source": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/ViewPagerIndicator/build/intermediates/bundles/default/res/color/vpi__dark_theme.xml"
     },
     {
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_dark.xml",
+        "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/color/abc_hint_foreground_material_dark.xml"
+    },
+    {
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/color/switch_thumb_material_dark.xml",
+        "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/color/switch_thumb_material_dark.xml"
+    },
+    {
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/color/abc_tint_btn_checkable.xml",
+        "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/color/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/color/abc_tint_switch_track.xml",
+        "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/color/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_dark.xml",
+        "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/color/abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml",
+        "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/color/abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/color/abc_tint_switch_thumb.xml",
+        "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/color/abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_light.xml",
+        "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/color/abc_secondary_text_material_light.xml"
+    },
+    {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_light.xml",
-        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/color/abc_hint_foreground_material_light.xml"
+        "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/color/abc_hint_foreground_material_light.xml"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/color/abc_search_url_text.xml",
-        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/color/abc_search_url_text.xml"
+        "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/color/abc_search_url_text.xml"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/color/abc_tint_seek_thumb.xml",
-        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/color/abc_tint_seek_thumb.xml"
+        "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/color/abc_tint_seek_thumb.xml"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/color/abc_tint_spinner.xml",
-        "source": "/Users/chen/.android/build-cache/69fed65b99e4767732f9f4d2e41062fe951c1014/output/res/color/abc_tint_spinner.xml"
+        "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/color/abc_tint_spinner.xml"
     }
 ]

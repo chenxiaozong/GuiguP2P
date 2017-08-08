@@ -8,12 +8,12 @@ import butterknife.ButterKnife.ViewBinder;
 public class MainActivity$$ViewBinder<T extends com.example.chen.guigup2p.MainActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131558504, "field 'flMain'");
-    target.flMain = finder.castView(view, 2131558504, "field 'flMain'");
-    view = finder.findRequiredView(source, 2131558518, "field 'ivMainButtonHome'");
-    target.ivMainButtonHome = finder.castView(view, 2131558518, "field 'ivMainButtonHome'");
-    view = finder.findRequiredView(source, 2131558517, "field 'llMainHome' and method 'switchFragment'");
-    target.llMainHome = finder.castView(view, 2131558517, "field 'llMainHome'");
+    view = finder.findRequiredView(source, 2131624074, "field 'flMain'");
+    target.flMain = finder.castView(view, 2131624074, "field 'flMain'");
+    view = finder.findRequiredView(source, 2131624091, "field 'ivMainButtonHome'");
+    target.ivMainButtonHome = finder.castView(view, 2131624091, "field 'ivMainButtonHome'");
+    view = finder.findRequiredView(source, 2131624090, "field 'llMainHome' and method 'switchFragment'");
+    target.llMainHome = finder.castView(view, 2131624090, "field 'llMainHome'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -22,10 +22,10 @@ public class MainActivity$$ViewBinder<T extends com.example.chen.guigup2p.MainAc
           target.switchFragment(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131558520, "field 'ivMainButtonInvest'");
-    target.ivMainButtonInvest = finder.castView(view, 2131558520, "field 'ivMainButtonInvest'");
-    view = finder.findRequiredView(source, 2131558519, "field 'llMainInvest' and method 'switchFragment'");
-    target.llMainInvest = finder.castView(view, 2131558519, "field 'llMainInvest'");
+    view = finder.findRequiredView(source, 2131624093, "field 'ivMainButtonInvest'");
+    target.ivMainButtonInvest = finder.castView(view, 2131624093, "field 'ivMainButtonInvest'");
+    view = finder.findRequiredView(source, 2131624092, "field 'llMainInvest' and method 'switchFragment'");
+    target.llMainInvest = finder.castView(view, 2131624092, "field 'llMainInvest'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -34,10 +34,10 @@ public class MainActivity$$ViewBinder<T extends com.example.chen.guigup2p.MainAc
           target.switchFragment(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131558522, "field 'ivMainButtonMy'");
-    target.ivMainButtonMy = finder.castView(view, 2131558522, "field 'ivMainButtonMy'");
-    view = finder.findRequiredView(source, 2131558521, "field 'llMainMy' and method 'switchFragment'");
-    target.llMainMy = finder.castView(view, 2131558521, "field 'llMainMy'");
+    view = finder.findRequiredView(source, 2131624095, "field 'ivMainButtonMy'");
+    target.ivMainButtonMy = finder.castView(view, 2131624095, "field 'ivMainButtonMy'");
+    view = finder.findRequiredView(source, 2131624094, "field 'llMainMy' and method 'switchFragment'");
+    target.llMainMy = finder.castView(view, 2131624094, "field 'llMainMy'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -46,10 +46,10 @@ public class MainActivity$$ViewBinder<T extends com.example.chen.guigup2p.MainAc
           target.switchFragment(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131558524, "field 'ivMainButtonMore'");
-    target.ivMainButtonMore = finder.castView(view, 2131558524, "field 'ivMainButtonMore'");
-    view = finder.findRequiredView(source, 2131558523, "field 'llMainMore' and method 'switchFragment'");
-    target.llMainMore = finder.castView(view, 2131558523, "field 'llMainMore'");
+    view = finder.findRequiredView(source, 2131624097, "field 'ivMainButtonMore'");
+    target.ivMainButtonMore = finder.castView(view, 2131624097, "field 'ivMainButtonMore'");
+    view = finder.findRequiredView(source, 2131624096, "field 'llMainMore' and method 'switchFragment'");
+    target.llMainMore = finder.castView(view, 2131624096, "field 'llMainMore'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
