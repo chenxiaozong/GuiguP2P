@@ -35,5 +35,19 @@
     </style>
 
 
+    <!-- MeFragment中最下面的3个选项的通用的设置 -->
+    <style name="LoginStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:drawableRight">@drawable/right</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:textColor">@color/product_detail_common</item>
+        <item name="android:textSize">16sp</item>
+    </style>
 
 </resources>

@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Aug 07 21:09:37 CST 2017
+#Tue Aug 08 09:00:28 CST 2017
 210.set=ANDROID_RESOURCE
 282.file=/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/resources-debug.ap_/res/layout-v17/abc_alert_dialog_title_material.xml
 14.set=ANDROID_RESOURCE

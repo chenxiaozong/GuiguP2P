@@ -1,16 +1,15 @@
 package com.example.chen.guigup2p.fragment;
 
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.SharedPreferences;
+import android.text.TextUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.chen.guigup2p.R;
+import com.example.chen.guigup2p.util.UIUtils;
 import com.loopj.android.http.RequestParams;
 
 import butterknife.Bind;
@@ -61,6 +60,8 @@ public class MyFragment extends BaseFragment {
 
     @Override
     protected void initData(String content) {
+        //1. 判断用户是否登录?
+        isLogin();
 
     }
 
@@ -78,5 +79,77 @@ public class MyFragment extends BaseFragment {
     public void onDestroyView() {
         super.onDestroyView();
         ButterKnife.unbind(this);
+    }
+
+    /**
+     * 显示页面前判断用户是否登录
+     * > 登陆过: 加载本地sp
+     * > 未登录: 显示登录对话框
+     * @return
+     */
+    public void isLogin() {
+        SharedPreferences sp = this.getActivity().getSharedPreferences("user_info", Context.MODE_PRIVATE);
+        String userName = sp.getString("name","");
+        
+        if(TextUtils.isEmpty(userName)) {
+            //提示登录对话框
+            doAlertLoginDialog();
+            
+        }else {
+            doLoadingLocalUser();//本地登录 加载本地sp 用户信息登录
+        }
+
+    }
+
+    private void doLoadingLocalUser() {
+
+    }
+
+    /**
+     * 提示登录对话框
+     *
+     */
+    private void doAlertLoginDialog() {
+
+
+/*
+        AlertDialog.Builder builder = new AlertDialog.Builder(UIUtils.getContext());
+
+        builder.setTitle("提示")
+                .setMessage("请登录")
+                .setCancelable(false)
+                .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        UIUtils.toast("正在登录",false);
+                    }
+                });
+        AlertDialog dialog = builder.create();
+
+        dialog.show();
+*/
+
+
+        new android.app.AlertDialog.Builder(this.getActivity())
+                .setTitle("提示")
+                .setMessage("您还没有登录哦！需要登录吗??")
+                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                            UIUtils.toast("进入登录页面",false);
+                //        ((BaseActivity) MeFragment.this.getActivity()).goToActivity(LoginActivity.class, null);
+                    }
+                })
+                .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        UIUtils.toast("取消登录",false);
+                    }
+                })
+
+//                .setCancelable(true)
+                .show();
+
+
     }
 }

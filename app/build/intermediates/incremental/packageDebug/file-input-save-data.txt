@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Aug 07 21:09:38 CST 2017
+#Tue Aug 08 09:00:28 CST 2017
 210.set=ANDROID_RESOURCE
 282.file=/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/manage_list_count.png
 14.set=ANDROID_RESOURCE

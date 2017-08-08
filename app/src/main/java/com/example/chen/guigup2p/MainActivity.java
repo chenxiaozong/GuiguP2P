@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.example.chen.guigup2p.activity.BaseActivity;
 import com.example.chen.guigup2p.common.ActivityManager;
 import com.example.chen.guigup2p.fragment.HomeFragment;
 import com.example.chen.guigup2p.fragment.InvestFragment;
@@ -24,7 +25,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class MainActivity extends FragmentActivity {
+public class MainActivity extends BaseActivity {
 
 
     @Bind(R.id.fl_main)
@@ -56,7 +57,7 @@ public class MainActivity extends FragmentActivity {
 
 
 
-    @Override
+/*    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //将当前activity添加到activityManager 中
@@ -64,14 +65,30 @@ public class MainActivity extends FragmentActivity {
 
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        setSelect(1);
-/*        //模拟异常
+
+*//*        //模拟异常
         Log.d("MainActivity--", "模拟异常");
         String str = null;
         if (str.equals("abc")) {
             Log.e("TAG", "abc");
-        }*/
+        }*//*
 
+    }*/
+
+    @Override
+    protected void initTitle() {
+
+    }
+
+    @Override
+    protected void initData() {
+        setSelect(1);
+
+    }
+
+    @Override
+    protected int getLayoutId() {
+        return R.layout.activity_main;
     }
 
 

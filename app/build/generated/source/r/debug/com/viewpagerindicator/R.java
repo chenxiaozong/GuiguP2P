@@ -107,11 +107,11 @@ public final class R {
         public static final int default_underline_indicator_fade_length = 0x7f0e0007;
     }
     public static final class style {
-        public static final int TextAppearance_TabPageIndicator = 0x7f090103;
-        public static final int Theme_PageIndicatorDefaults = 0x7f090115;
-        public static final int Widget = 0x7f09011d;
-        public static final int Widget_IconPageIndicator = 0x7f090166;
-        public static final int Widget_TabPageIndicator = 0x7f090167;
+        public static final int TextAppearance_TabPageIndicator = 0x7f090104;
+        public static final int Theme_PageIndicatorDefaults = 0x7f090116;
+        public static final int Widget = 0x7f09011e;
+        public static final int Widget_IconPageIndicator = 0x7f090167;
+        public static final int Widget_TabPageIndicator = 0x7f090168;
     }
     public static final class styleable {
         public static final int[] CirclePageIndicator = { 0x010100c4, 0x010100d4, 0x7f010000, 0x7f010031, 0x7f0100db, 0x7f0100dc, 0x7f0100dd, 0x7f0100de, 0x7f0100df };

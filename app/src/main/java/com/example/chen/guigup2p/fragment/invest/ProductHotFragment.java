@@ -1,8 +1,6 @@
 package com.example.chen.guigup2p.fragment.invest;
 
 import android.graphics.Color;
-import android.support.annotation.UiThread;
-import android.support.v7.widget.DrawableUtils;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
