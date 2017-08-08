@@ -5,6 +5,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Environment;
 import android.support.v4.app.FragmentActivity;
 import android.text.TextUtils;
 import android.view.View;
@@ -25,6 +27,10 @@ import com.loopj.android.http.RequestParams;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Transformation;
 import com.squareup.picasso.UrlConnectionDownloader;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.OutputStream;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -165,6 +171,15 @@ public class MyFragment extends BaseFragment {
         tvMeName.setText(user.getName());
 
         String imgurl = user.getImageurl();
+
+  //判断是否存在本地图像,存在则不需要联网加载,不存在则需要联网加载
+
+        boolean isExist = readLocalIcon();
+        if(isExist) {
+            return;
+        }
+
+
         //2. 显示用户头像: 未经过圆形处理
 /*
         Picasso.with(getContext())
@@ -192,6 +207,9 @@ public class MyFragment extends BaseFragment {
 
 */
         //2. 显示用户头像: 圆形处理:压缩处理
+
+
+
 
         Picasso.with(getContext())
                 .load(imgurl)
@@ -315,4 +333,34 @@ public class MyFragment extends BaseFragment {
     }
 
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        readLocalIcon();
+
+    }
+
+    private boolean readLocalIcon() {
+
+        String externalStorageState = Environment.getExternalStorageState();
+        String mediaMounted = Environment.MEDIA_MOUNTED;
+
+        File filesDir ;
+        if(externalStorageState.equals(mediaMounted)) {
+            filesDir = this.getActivity().getExternalFilesDir("");
+        }else {
+            filesDir = this.getActivity().getFilesDir();
+        }
+
+
+        
+            File file = new File(filesDir, "icon.png");
+        if(file.exists()) {
+            Bitmap bitmap = BitmapFactory.decodeFile(file.getAbsolutePath());
+            ivMeIcon.setImageBitmap(bitmap);
+            return true;
+        }
+        return false;
+
+    }
 }

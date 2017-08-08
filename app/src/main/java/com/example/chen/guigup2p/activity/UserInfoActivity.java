@@ -181,7 +181,7 @@ public class UserInfoActivity extends BaseActivity {
 
 
             //5. 保存到本地缓存 :bitmap ? zoom
-            saveImageToLocal(bitmap);
+            saveImageToLocal(zoom);
 
 
 
@@ -216,7 +216,7 @@ public class UserInfoActivity extends BaseActivity {
 
 
             //5. 保存到本地缓存 :bitmap ? zoom
-            saveImageToLocal(bitmap);
+            saveImageToLocal(zoom);
         }
 
 
