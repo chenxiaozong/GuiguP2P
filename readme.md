@@ -18,3 +18,4 @@
 ### [11.投资:热门理财](markdown_note/readme_11.md)
 ### [12.我的资产](markdown_note/readme_12.md)
 ### [13.修改用户头像](markdown_note/readme_13.md)
+### [14.支付功能](markdown_note/readme_14.md)

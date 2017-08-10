@@ -2,31 +2,22 @@
 <items version="2" >
 
     <item
-        is-multidex="false"
-        jar="/Users/chen/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/7.0.1/d5d13ea991eab0252e3710e5df3d6a9d4b21d461/butterknife-7.0.1.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/libs/alipayutdid.jar"
+        jumboMode="true"
         optimize="true"
         revision="26.0.0"
-        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
-        <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/pre-dexed/debug/butterknife-7.0.1_13e3d02a880708708f4c523761448fbb336f2174.jar" />
+        sha1="4345fa0a5a7768f2f9c86aaab7db9e2906765193">
+        <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/transforms/dex/debug/folders/1000/2/alipayutdid_ae9680825291d6252c3782db7ff919f66cc755ac/classes.dex" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/chen/.android/build-cache/cc1c58d8448a4cb3b27659fd7837b9cc3cce5dfb/output/jars/classes.jar"
+        jar="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/libs/alipayutdid.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.0"
-        sha1="6a022bf00ccd0948a8180c505e8e458bbddd43a6">
-        <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/pre-dexed/debug/classes_680063092e50cb3584fb7fa3a1fefe829e113a15.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/chen/.android/build-cache/d78fc76c5cdb005baf70f6628a03e75a025fcdb6/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="cddcd0fb93bc70e27325f2f715b2710332004ebb">
-        <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/pre-dexed/debug/classes_e5effab5d275e9cbd51210274ebd2d99a286ce20.jar" />
+        sha1="4345fa0a5a7768f2f9c86aaab7db9e2906765193">
+        <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/pre-dexed/debug/alipayutdid_ae9680825291d6252c3782db7ff919f66cc755ac.jar" />
     </item>
     <item
         is-multidex="true"
@@ -48,6 +39,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/libs/alipaysecsdk.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="7413c074c9edf523050267b93d0875151dc4b644">
+        <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/pre-dexed/debug/alipaysecsdk_62ad21753d0fa310665a755e0dc141712ad4dd7c.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/libs/fastjson-1.2.4.jar"
         jumboMode="false"
         optimize="true"
@@ -65,24 +65,6 @@
         <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/transforms/dex/debug/folders/1000/2/android-async-http-master_9429e9744a73d60e6097797ff06fc0988936784a/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/Users/chen/.android/build-cache/f4dc1287a54e6811a797e7484af7dff8be12870a/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="5f49fbc1bda3fa9073a82dd87de3e1ceea24268d">
-        <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/pre-dexed/debug/classes_493cc819f2ac208f072a59ef005470d1fc4595e4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/chen/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
-        <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/pre-dexed/debug/picasso-2.5.2_b784f19e749fc5589d73cbd6eb3e87dcae902ba3.jar" />
-    </item>
-    <item
         is-multidex="true"
         jar="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
@@ -92,22 +74,40 @@
         <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_9e9219b816bb4572f3ed09a0ca584d97eb53419c/classes.dex" />
     </item>
     <item
+        is-multidex="false"
+        jar="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/libs/alipaysdk.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="b40481f01537a329936ce54ee2fe15ef2537f010">
+        <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/pre-dexed/debug/alipaysdk_bbed47b4273b150a13089d6c32a8c7cbd05be940.jar" />
+    </item>
+    <item
         is-multidex="true"
         jar="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="26.0.0"
-        sha1="471541e9fde4f8c4c05544def05e61bcad2fe07a">
+        sha1="dac86f6b11533e625e62e28f5a86712eb190db3d">
         <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_6c4596862e10dd36e7ac4f21e63fef8950c1c1e4/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/Users/chen/.android/build-cache/29b1b4e56dbc92c2ff64ca23b4fe43ce8dc98e8f/output/jars/classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/libs/alipaysdk.jar"
+        jumboMode="true"
         optimize="true"
         revision="26.0.0"
-        sha1="c4f45092eee6cdf1a5dbd597b2b6819be652ce2e">
-        <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/pre-dexed/debug/classes_9ad0df55e350807eecf19f84b6e0673ea448cc27.jar" />
+        sha1="b40481f01537a329936ce54ee2fe15ef2537f010">
+        <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/transforms/dex/debug/folders/1000/2/alipaysdk_bbed47b4273b150a13089d6c32a8c7cbd05be940/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/libs/alipaysecsdk.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="7413c074c9edf523050267b93d0875151dc4b644">
+        <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/transforms/dex/debug/folders/1000/2/alipaysecsdk_62ad21753d0fa310665a755e0dc141712ad4dd7c/classes.dex" />
     </item>
     <item
         is-multidex="false"

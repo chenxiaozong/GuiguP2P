@@ -352,6 +352,52 @@ Multi-line Code
 Multi-line Code
 ```
 
+# 3. 退出登录按钮
+```java
+
+    /**
+     * 退出登录 button 点击事件
+     * 1. 清空本地sp
+     * 2. 清空本地用户头像
+     * 3. 销毁所有activity
+     * 4. gotoMainActivity()
+     * @param view
+     */
+    @OnClick(R.id.btn_user_logout)
+    public  void logout(View view){
+
+        SharedPreferences user_info = this.getSharedPreferences("user_info", Context.MODE_PRIVATE);
+        user_info.edit().clear().commit();//清空sp中大数据,但是sp对应的文件任然存在
+
+        //2
+
+        String externalStorageState = Environment.getExternalStorageState();
+        String mediaMounted = Environment.MEDIA_MOUNTED;
+
+        File fileDir ;
+        if(externalStorageState.equals(mediaMounted)) {//挂载sd
+            fileDir = this.getExternalFilesDir("");
+        }else {
+            fileDir = this.getFilesDir();
+        }
+
+        File img = new File(fileDir,"icon.png");
+
+        if(img.exists()) {
+            img.delete();
+        }
+
+        //3
+
+        this.removeAll();
+        //4.
+        this.goToActivity(MainActivity.class,null);
+
+
+    }
+Multi-line Code
+```
+
 
 
 

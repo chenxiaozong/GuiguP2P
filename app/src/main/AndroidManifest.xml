@@ -26,6 +26,14 @@
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
+    <!-- 支付宝权限声明 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
     <application
         android:name=".common.MyApplication"
         android:allowBackup="true"
@@ -48,7 +56,8 @@
         </activity>
         <activity android:name=".activity.LoginActiivy" />
         <activity android:name=".activity.LoginActivity" />
-        <activity android:name=".activity.UserInfoActivity"></activity>
+        <activity android:name=".activity.UserInfoActivity" />
+        <activity android:name=".activity.ChongZhiActivity"></activity>
     </application>
 
 </manifest>

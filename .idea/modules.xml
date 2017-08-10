@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/GuiguP2P.iml" filepath="$PROJECT_DIR$/GuiguP2P.iml" />
       <module fileurl="file://$PROJECT_DIR$/ViewPagerIndicator/ViewPagerIndicator.iml" filepath="$PROJECT_DIR$/ViewPagerIndicator/ViewPagerIndicator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/alipay_demo/alipay_demo.iml" filepath="$PROJECT_DIR$/alipay_demo/alipay_demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

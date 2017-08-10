@@ -2,10 +2,10 @@ package com.example.chen.guigup2p.fragment;
 
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.media.AudioRecord;
 import android.os.Environment;
 import android.support.v4.app.FragmentActivity;
 import android.text.TextUtils;
@@ -18,6 +18,7 @@ import android.widget.TextView;
 import com.example.chen.guigup2p.MainActivity;
 import com.example.chen.guigup2p.R;
 import com.example.chen.guigup2p.activity.BaseActivity;
+import com.example.chen.guigup2p.activity.ChongZhiActivity;
 import com.example.chen.guigup2p.activity.LoginActivity;
 import com.example.chen.guigup2p.activity.UserInfoActivity;
 import com.example.chen.guigup2p.bean.User;
@@ -26,11 +27,8 @@ import com.example.chen.guigup2p.util.UIUtils;
 import com.loopj.android.http.RequestParams;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Transformation;
-import com.squareup.picasso.UrlConnectionDownloader;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.OutputStream;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -42,6 +40,9 @@ import butterknife.OnClick;
  */
 
 public class MyFragment extends BaseFragment {
+
+
+    //标题栏
     @Bind(R.id.iv_top_title_back)
     ImageView ivTopTitleBack;
     @Bind(R.id.tv_top_title_tap)
@@ -269,7 +270,6 @@ public class MyFragment extends BaseFragment {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         startLoginActivity();
-
                     }
                 })
                 .setNegativeButton("取消", new DialogInterface.OnClickListener() {
@@ -322,6 +322,22 @@ public class MyFragment extends BaseFragment {
     public  void titleSettingClick(View view){
         startUserInfoAcrivity();
     }
+
+
+
+
+    @OnClick(R.id.recharge)
+    public  void rechargeOnclick(View view){
+        //跳转到充值页面
+
+        BaseActivity baseActivity = (BaseActivity) this.getActivity();
+        baseActivity.goToActivity(ChongZhiActivity.class,null);
+
+    }
+
+
+
+
 
     /**
      * 启动用户信息设置activity

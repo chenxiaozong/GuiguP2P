@@ -1,6 +1,7 @@
 package com.example.chen.guigup2p.activity;
 
 import android.media.tv.TvContract;
+import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -110,19 +111,12 @@ public class LoginActivity extends BaseActivity {
         client.post(loginUrl,params,new AsyncHttpResponseHandler(){
             @Override
             public void onSuccess(String content) {
-                //检验成功:
+                //检验成功: content 返回success
                 /*
                 content  = {
-                "data": {
-                    "name": "shkstart",
-                            "imageurl": "http://192.168.1.104:8080/P2PInvest/images/tx.png",
-                            "iscredit": "true",
-                            "phone": "13012341234"
-                },
+                "data": {..                },
                 "success": true
                  */
-
-
                 //检验失败:
                 //content = {"success":false}
 
@@ -143,12 +137,12 @@ public class LoginActivity extends BaseActivity {
                     User user = JSON.parseObject(data, User.class);
 
                     //2. 保存用户登录信息 到sp
-
                     saveUser(user);
                     //3. 销毁所有登录activity
                     removeAll();
 
                     //4. 跳转到mainActivity
+
                     goToActivity(MainActivity.class,null);
 
                 }else {
