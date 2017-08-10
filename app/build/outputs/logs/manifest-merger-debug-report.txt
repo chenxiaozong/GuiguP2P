@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidManifest.xml:2:1-67:12
+ADDED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidManifest.xml:2:1-68:12
 	package
 		ADDED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidManifest.xml:3:5-40
 		INJECTED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidManifest.xml
@@ -98,7 +98,7 @@ ADDED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidM
 	android:name
 		ADDED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidManifest.xml:27:22-69
 application
-ADDED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidManifest.xml:37:5-65:19
+ADDED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidManifest.xml:37:5-66:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/chen/.android/build-cache/1de4af181095ec27713f3b8364c22d59ffee0004/output/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:design:26.0.0-alpha1] /Users/chen/.android/build-cache/cc1c58d8448a4cb3b27659fd7837b9cc3cce5dfb/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/AndroidManifest.xml:29:5-20
@@ -174,9 +174,13 @@ ADDED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidM
 	android:name
 		ADDED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidManifest.xml:63:19-63
 activity#com.example.chen.guigup2p.activity.my.BarChartAcivity
-ADDED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidManifest.xml:64:9-74
+ADDED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidManifest.xml:64:9-65
 	android:name
 		ADDED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidManifest.xml:64:19-62
+activity#com.example.chen.guigup2p.activity.more.UserRegisterActivity
+ADDED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidManifest.xml:65:9-81
+	android:name
+		ADDED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidManifest.xml:65:19-69
 uses-sdk
 INJECTED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [GuiguP2P:ViewPagerIndicator:unspecified] /Users/chen/code/AndroidStudioProjects/GuiguP2P/ViewPagerIndicator/build/intermediates/bundles/default/AndroidManifest.xml:7:5-9:40

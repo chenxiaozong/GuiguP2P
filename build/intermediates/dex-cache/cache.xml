@@ -142,7 +142,7 @@
         jumboMode="true"
         optimize="true"
         revision="26.0.0"
-        sha1="6f89e0b81b94da7ef96b2edf56349cfc6f34607b">
+        sha1="fcd7098022d58cd7eb95ff2a21b3a0d84d7a87cf">
         <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_6c4596862e10dd36e7ac4f21e63fef8950c1c1e4/classes.dex" />
     </item>
     <item

@@ -8,18 +8,18 @@ import butterknife.ButterKnife.ViewBinder;
 public class InvestFragment$$ViewBinder<T extends com.example.chen.guigup2p.fragment.InvestFragment> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131624175, "field 'ivTopTitleBack'");
-    target.ivTopTitleBack = finder.castView(view, 2131624175, "field 'ivTopTitleBack'");
-    view = finder.findRequiredView(source, 2131624176, "field 'tvTopTitleTap'");
-    target.tvTopTitleTap = finder.castView(view, 2131624176, "field 'tvTopTitleTap'");
-    view = finder.findRequiredView(source, 2131624177, "field 'ivTopTitleSetting'");
-    target.ivTopTitleSetting = finder.castView(view, 2131624177, "field 'ivTopTitleSetting'");
-    view = finder.findRequiredView(source, 2131624174, "field 'llTopTitleMain'");
-    target.llTopTitleMain = finder.castView(view, 2131624174, "field 'llTopTitleMain'");
-    view = finder.findRequiredView(source, 2131624129, "field 'tabpagerInvest'");
-    target.tabpagerInvest = finder.castView(view, 2131624129, "field 'tabpagerInvest'");
-    view = finder.findRequiredView(source, 2131624130, "field 'viewPagerInvest'");
-    target.viewPagerInvest = finder.castView(view, 2131624130, "field 'viewPagerInvest'");
+    view = finder.findRequiredView(source, 2131624188, "field 'ivTopTitleBack'");
+    target.ivTopTitleBack = finder.castView(view, 2131624188, "field 'ivTopTitleBack'");
+    view = finder.findRequiredView(source, 2131624189, "field 'tvTopTitleTap'");
+    target.tvTopTitleTap = finder.castView(view, 2131624189, "field 'tvTopTitleTap'");
+    view = finder.findRequiredView(source, 2131624190, "field 'ivTopTitleSetting'");
+    target.ivTopTitleSetting = finder.castView(view, 2131624190, "field 'ivTopTitleSetting'");
+    view = finder.findRequiredView(source, 2131624187, "field 'llTopTitleMain'");
+    target.llTopTitleMain = finder.castView(view, 2131624187, "field 'llTopTitleMain'");
+    view = finder.findRequiredView(source, 2131624134, "field 'tabpagerInvest'");
+    target.tabpagerInvest = finder.castView(view, 2131624134, "field 'tabpagerInvest'");
+    view = finder.findRequiredView(source, 2131624135, "field 'viewPagerInvest'");
+    target.viewPagerInvest = finder.castView(view, 2131624135, "field 'viewPagerInvest'");
   }
 
   @Override public void unbind(T target) {

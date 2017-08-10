@@ -72,6 +72,7 @@
         <activity android:name="com.example.chen.guigup2p.activity.my.LineChartActivity" />
         <activity android:name="com.example.chen.guigup2p.activity.my.PieChartActivity" />
         <activity android:name="com.example.chen.guigup2p.activity.my.BarChartAcivity" />
+        <activity android:name="com.example.chen.guigup2p.activity.more.UserRegisterActivity" />
 
         <provider
             android:name="com.android.tools.fd.runtime.InstantRunContentProvider"

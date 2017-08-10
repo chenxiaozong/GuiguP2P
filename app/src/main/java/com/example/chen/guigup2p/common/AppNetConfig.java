@@ -21,6 +21,8 @@ public class AppNetConfig {
         public static final String UPDATE = BASE_URL + "update.json";//访问服务器端当前应用的版本信息
 
 
+        public static final String USERREGISTER = BASE_URL + "UserRegister";//访问“homeFragment”
+
         public static final String REGISTER = BASE_URL + "UserRegister";//注册
 
         public static final String FEEDBACK = BASE_URL + "FeedBack";//用户反馈

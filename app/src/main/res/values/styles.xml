@@ -9,6 +9,24 @@
     </style>
 
 
+    <!--
+        提供MoreFragment布局中TextView的样式
+        android:layout_height="wrap_content"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:padding="20dp"
+        android:textColor="@color/more_text"
+        android:textSize="25sp"
+    -->
+    <style name="MoreTextStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">20dp</item>
+        <item name="android:textColor">@color/more_text</item>
+        <item name="android:textSize">25sp</item>
+
+    </style>
 
 
     <!--自定义viewpagerIndicator样式-->

@@ -61,7 +61,8 @@
         <activity android:name=".activity.TiXianActivity" />
         <activity android:name=".activity.my.LineChartActivity" />
         <activity android:name=".activity.my.PieChartActivity" />
-        <activity android:name=".activity.my.BarChartAcivity"></activity>
+        <activity android:name=".activity.my.BarChartAcivity" />
+        <activity android:name=".activity.more.UserRegisterActivity"></activity>
     </application>
 
 </manifest>
