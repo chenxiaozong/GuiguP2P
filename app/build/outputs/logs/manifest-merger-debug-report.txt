@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidManifest.xml:2:1-63:12
+ADDED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidManifest.xml:2:1-67:12
 	package
 		ADDED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidManifest.xml:3:5-40
 		INJECTED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidManifest.xml
@@ -98,7 +98,7 @@ ADDED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidM
 	android:name
 		ADDED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidManifest.xml:27:22-69
 application
-ADDED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidManifest.xml:37:5-61:19
+ADDED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidManifest.xml:37:5-65:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/chen/.android/build-cache/1de4af181095ec27713f3b8364c22d59ffee0004/output/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:design:26.0.0-alpha1] /Users/chen/.android/build-cache/cc1c58d8448a4cb3b27659fd7837b9cc3cce5dfb/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/AndroidManifest.xml:29:5-20
@@ -158,12 +158,29 @@ ADDED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidM
 	android:name
 		ADDED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidManifest.xml:59:19-60
 activity#com.example.chen.guigup2p.activity.ChongZhiActivity
-ADDED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidManifest.xml:60:9-72
+ADDED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidManifest.xml:60:9-63
 	android:name
 		ADDED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidManifest.xml:60:19-60
+activity#com.example.chen.guigup2p.activity.TiXianActivity
+ADDED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidManifest.xml:61:9-61
+	android:name
+		ADDED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidManifest.xml:61:19-58
+activity#com.example.chen.guigup2p.activity.my.LineChartActivity
+ADDED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidManifest.xml:62:9-67
+	android:name
+		ADDED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidManifest.xml:62:19-64
+activity#com.example.chen.guigup2p.activity.my.PieChartActivity
+ADDED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidManifest.xml:63:9-66
+	android:name
+		ADDED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidManifest.xml:63:19-63
+activity#com.example.chen.guigup2p.activity.my.BarChartAcivity
+ADDED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidManifest.xml:64:9-74
+	android:name
+		ADDED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidManifest.xml:64:19-62
 uses-sdk
 INJECTED from /Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [GuiguP2P:ViewPagerIndicator:unspecified] /Users/chen/code/AndroidStudioProjects/GuiguP2P/ViewPagerIndicator/build/intermediates/bundles/default/AndroidManifest.xml:7:5-9:40
+MERGED from [GuiguP2P:MPChartLib:unspecified] /Users/chen/code/AndroidStudioProjects/GuiguP2P/MPChartLib/build/intermediates/bundles/default/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/chen/.android/build-cache/1de4af181095ec27713f3b8364c22d59ffee0004/output/AndroidManifest.xml:5:5-7:41
 MERGED from [com.youth.banner:banner:1.4.9] /Users/chen/.android/build-cache/f4dc1287a54e6811a797e7484af7dff8be12870a/output/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:design:26.0.0-alpha1] /Users/chen/.android/build-cache/cc1c58d8448a4cb3b27659fd7837b9cc3cce5dfb/output/AndroidManifest.xml:21:5-23:62

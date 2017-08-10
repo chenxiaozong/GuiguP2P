@@ -3,6 +3,33 @@
 
     <item
         is-multidex="true"
+        jar="/Users/chen/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/MPChartExample/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-21.0.3_74072cbb79f69692b9a4aaed9cfa08cc0fc5ce7e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chen/code/AndroidStudioProjects/GuiguP2P/MPChartExample/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/MPChartExample/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_99b0b6040cd710b2a2f952d785dfdcf20f27c4d6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chen/.android/build-cache/2e4e4f853b9ebfafb7e63a4fbdb90f9b91288a26/output/jars/libs/internal_impl-21.0.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/MPChartExample/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-21.0.3_322fa3eaa88bd32db98a87c8ea349c33324d81ae/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/libs/alipayutdid.jar"
         jumboMode="true"
         optimize="true"
@@ -57,12 +84,39 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/chen/.android/build-cache/2e4e4f853b9ebfafb7e63a4fbdb90f9b91288a26/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/MPChartExample/build/intermediates/transforms/dex/debug/folders/1000/10/classes_237f38c11d9c2823f35e7704920612355badad10/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/libs/android-async-http-master.jar"
         jumboMode="true"
         optimize="true"
         revision="26.0.0"
         sha1="9f4e928be607675a16f5045ebac582d874692698">
         <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/transforms/dex/debug/folders/1000/2/android-async-http-master_9429e9744a73d60e6097797ff06fc0988936784a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chen/.android/build-cache/c75097bbcdc36f508f9cdc491bb234660509fabf/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/MPChartExample/build/intermediates/transforms/dex/debug/folders/1000/10/classes_542c53ae9db8b012472b26380df8453d760feed0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chen/code/AndroidStudioProjects/GuiguP2P/MPChartExample/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="a9985c3cf636b159860fc0163d78996c7c3a8720">
+        <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/MPChartExample/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_d21067a3113a1283d6376de2880e8ca7ed682651/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -88,7 +142,7 @@
         jumboMode="true"
         optimize="true"
         revision="26.0.0"
-        sha1="dac86f6b11533e625e62e28f5a86712eb190db3d">
+        sha1="6f89e0b81b94da7ef96b2edf56349cfc6f34607b">
         <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_6c4596862e10dd36e7ac4f21e63fef8950c1c1e4/classes.dex" />
     </item>
     <item

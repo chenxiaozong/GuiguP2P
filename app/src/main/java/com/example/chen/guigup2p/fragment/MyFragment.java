@@ -20,7 +20,11 @@ import com.example.chen.guigup2p.R;
 import com.example.chen.guigup2p.activity.BaseActivity;
 import com.example.chen.guigup2p.activity.ChongZhiActivity;
 import com.example.chen.guigup2p.activity.LoginActivity;
+import com.example.chen.guigup2p.activity.TiXianActivity;
 import com.example.chen.guigup2p.activity.UserInfoActivity;
+import com.example.chen.guigup2p.activity.my.BarChartAcivity;
+import com.example.chen.guigup2p.activity.my.LineChartActivity;
+import com.example.chen.guigup2p.activity.my.PieChartActivity;
 import com.example.chen.guigup2p.bean.User;
 import com.example.chen.guigup2p.util.BitmapUtils;
 import com.example.chen.guigup2p.util.UIUtils;
@@ -67,6 +71,7 @@ public class MyFragment extends BaseFragment {
     ImageView recharge;
     @Bind(R.id.withdraw)
     ImageView withdraw;
+
     @Bind(R.id.ll_touzi)
     TextView llTouzi;
     @Bind(R.id.ll_touzi_zhiguan)
@@ -324,7 +329,10 @@ public class MyFragment extends BaseFragment {
     }
 
 
-
+    /**
+     * 充值点击按钮
+     * @param view
+     */
 
     @OnClick(R.id.recharge)
     public  void rechargeOnclick(View view){
@@ -335,7 +343,35 @@ public class MyFragment extends BaseFragment {
 
     }
 
+    /**
+     * 提现
+     * @param view
+     */
+    @OnClick(R.id.withdraw)
+    public  void tiXian(View view){
+        BaseActivity baseActivity = (BaseActivity) this.getActivity();
+        baseActivity.goToActivity(TiXianActivity.class,null);
+    }
 
+
+    @OnClick(R.id.ll_touzi)
+    public  void touziOnclick(View view){
+
+        ((BaseActivity)this.getActivity()).goToActivity(LineChartActivity.class,null);
+
+    }
+
+    @OnClick(R.id.ll_touzi_zhiguan)
+    public  void zhiguanOnclick(View view){
+        ((BaseActivity)this.getActivity()).goToActivity(BarChartAcivity.class,null);
+
+    }
+
+    @OnClick(R.id.ll_zichan)
+    public  void zichanOnclick(View view){
+        ((BaseActivity)this.getActivity()).goToActivity(PieChartActivity.class,null);
+
+    }
 
 
 

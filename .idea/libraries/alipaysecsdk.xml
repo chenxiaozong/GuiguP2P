@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="alipaysecsdk">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/app/libs/alipaysecsdk.jar!/" />
+      <root url="jar://$PROJECT_DIR$/alipay_demo/libs/alipaysecsdk.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
