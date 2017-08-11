@@ -159,7 +159,6 @@ public class MyFragment extends BaseFragment {
         BaseActivity mainActivity = (BaseActivity) getActivity();
         User user = mainActivity.readUser();//BaseActivity 抽象方法 readUser
 
-
         //判断是否开启手势密码? 开启(输入手势密码 ):没开启(直接显示)
         SharedPreferences setcretsp = this.getContext().getSharedPreferences("secret_protect", Context.MODE_PRIVATE);
         boolean isOpen = setcretsp.getBoolean("isOpen", false);
