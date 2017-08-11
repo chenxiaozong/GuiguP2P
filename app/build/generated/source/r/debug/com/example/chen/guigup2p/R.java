@@ -3788,6 +3788,9 @@ containing a value of this type.
         public static final int btn_user_logout=0x7f0e00ab;
         public static final int buttonPanel=0x7f0e005c;
         public static final int cancel_action=0x7f0e00f4;
+        public static final int cb_fankui_invest=0x7f0e010d;
+        public static final int cb_fankui_tech=0x7f0e010c;
+        public static final int cb_fankui_zixun=0x7f0e010e;
         public static final int center=0x7f0e002e;
         public static final int center_crop=0x7f0e002f;
         public static final int center_horizontal=0x7f0e0038;
@@ -3820,6 +3823,7 @@ containing a value of this type.
         public static final int enterAlways=0x7f0e0022;
         public static final int enterAlwaysCollapsed=0x7f0e0023;
         public static final int et_chongzhi=0x7f0e0087;
+        public static final int et_fankui_content=0x7f0e010f;
         public static final int et_input_money=0x7f0e00a6;
         public static final int et_login_number=0x7f0e009a;
         public static final int et_login_pwd=0x7f0e009c;
@@ -3877,7 +3881,7 @@ containing a value of this type.
         public static final int ll_zichan=0x7f0e00e4;
         public static final int lock_indicator=0x7f0e008f;
         public static final int lv_productlist=0x7f0e00e7;
-        public static final int masked=0x7f0e010c;
+        public static final int masked=0x7f0e0111;
         public static final int matrix=0x7f0e0035;
         public static final int media_actions=0x7f0e00f6;
         public static final int middle=0x7f0e0048;
@@ -3909,6 +3913,7 @@ containing a value of this type.
         public static final int progress_horizontal=0x7f0e0007;
         public static final int radio=0x7f0e006e;
         public static final int recharge=0x7f0e00e0;
+        public static final int rg_fankui=0x7f0e010b;
         public static final int right=0x7f0e003d;
         public static final int right_icon=0x7f0e00ff;
         public static final int right_side=0x7f0e00fa;
@@ -4009,7 +4014,7 @@ containing a value of this type.
         public static final int view=0x7f0e0086;
         public static final int view_offset_helper=0x7f0e000f;
         public static final int viewpage_invest=0x7f0e00d3;
-        public static final int visible=0x7f0e010b;
+        public static final int visible=0x7f0e0110;
         public static final int withText=0x7f0e004d;
         public static final int withdraw=0x7f0e00e1;
         public static final int wrap=0x7f0e0012;
@@ -4119,6 +4124,7 @@ containing a value of this type.
         public static final int select_dialog_singlechoice_material=0x7f040053;
         public static final int support_simple_spinner_dropdown_item=0x7f040054;
         public static final int top_title_main=0x7f040055;
+        public static final int view_feedback=0x7f040056;
     }
     public static final class mipmap {
         public static final int ic_icon=0x7f030000;

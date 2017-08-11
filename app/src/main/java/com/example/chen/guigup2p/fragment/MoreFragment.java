@@ -1,15 +1,24 @@
 package com.example.chen.guigup2p.fragment;
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.net.Uri;
+import android.support.annotation.IdRes;
+import android.support.v4.app.ActivityCompat;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.ToggleButton;
@@ -18,7 +27,10 @@ import com.example.chen.guigup2p.R;
 import com.example.chen.guigup2p.activity.BaseActivity;
 import com.example.chen.guigup2p.activity.more.UserRegisterActivity;
 import com.example.chen.guigup2p.activity.more.gesture.GestureEditActivity;
+import com.example.chen.guigup2p.common.AppNetConfig;
 import com.example.chen.guigup2p.util.UIUtils;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
 import butterknife.Bind;
@@ -98,7 +110,6 @@ public class MoreFragment extends BaseFragment implements View.OnClickListener {
         setGesture();
 
 
-
         //为每个条目设置点击事件
         setItemOnclick();
     }
@@ -107,14 +118,14 @@ public class MoreFragment extends BaseFragment implements View.OnClickListener {
         toggleMore.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-                if(isChecked) {
-                    UIUtils.toast("开启",false);
-                    sp.edit().putBoolean("isOpen",true).commit(); //此处设置,下面可能会更改
+                if (isChecked) {
+                    UIUtils.toast("开启", false);
+                    sp.edit().putBoolean("isOpen", true).commit(); //此处设置,下面可能会更改
                     toggleMore.setChecked(true);
 
                     //判断之前是否开启过
                     String inputCode = sp.getString("inputCode", "");
-                    if(TextUtils.isEmpty(inputCode)) {//之前没设置过手势密码:
+                    if (TextUtils.isEmpty(inputCode)) {//之前没设置过手势密码:
                         //启动alert 提示是否设置手势密码
 
                         new AlertDialog.Builder(MoreFragment.this.getContext()).setTitle("提示")
@@ -124,7 +135,7 @@ public class MoreFragment extends BaseFragment implements View.OnClickListener {
                                     public void onClick(DialogInterface dialogInterface, int i) {
                                         //现在设定: 启动ACTIVIT
                                         BaseActivity base = (BaseActivity) MoreFragment.this.getContext();
-                                        base.goToActivity(GestureEditActivity.class,null);
+                                        base.goToActivity(GestureEditActivity.class, null);
 
                                         //sp.edit().putBoolean("isOpen",true);
                                         //toggleMore.setChecked(true);
@@ -136,28 +147,25 @@ public class MoreFragment extends BaseFragment implements View.OnClickListener {
                                     public void onClick(DialogInterface dialogInterface, int i) {
                                         //取消设置手势密码
                                         //1.
-                                        sp.edit().putBoolean("isOpen",false).commit();
+                                        sp.edit().putBoolean("isOpen", false).commit();
 
                                         toggleMore.setChecked(false);
                                     }
                                 })
                                 .show();
 
-                    }else {
+                    } else {
                         //之前设置过手势密码:开启
-                        sp.edit().putBoolean("inOpen",true).commit();
+                        sp.edit().putBoolean("inOpen", true).commit();
                         //toggleMore.setChecked(true);
                     }
 
 
-
-
-                }else {
-                    UIUtils.toast("关闭手势密码",false);
+                } else {
+                    UIUtils.toast("关闭手势密码", false);
                     //保存状态到sp
-                    sp.edit().putBoolean("isOpen",false).commit();
+                    sp.edit().putBoolean("isOpen", false).commit();
                 }
-
 
 
             }
@@ -193,29 +201,171 @@ public class MoreFragment extends BaseFragment implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.tv_more_regist :
+        switch (view.getId()) {
+            case R.id.tv_more_regist:
                 Log.d("MoreFragment", "用户注册");
                 BaseActivity baseActivity = (BaseActivity) this.getActivity();
-                baseActivity.goToActivity(UserRegisterActivity.class,null);
+                baseActivity.goToActivity(UserRegisterActivity.class, null);
 
                 break;
             case R.id.tv_more_reset:
                 Log.d("MoreFragment", "重置密码");
+                resetGesture();
                 break;
             case R.id.tv_more_about:
                 Log.d("MoreFragment", "关于");
                 break;
             case R.id.rl_more_contact:
                 Log.d("MoreFragment", "客服");
+                contactService();
                 break;
             case R.id.tv_more_fankui:
-                Log.d("MoreFragment", "反馈");
+                setFeedBack();
                 break;
             case R.id.tv_more_share:
                 Log.d("MoreFragment", "分享");
                 break;
         }
+    }
+
+    /**
+     * 向后台发送反馈信息
+     * alertdialog
+     */
+    private String department = "不明确";
+
+    private void setFeedBack() {
+        View feedbackll = View.inflate(MoreFragment.this.getActivity(), R.layout.view_feedback, null);
+        final RadioGroup rg_fankui  = feedbackll.findViewById(R.id.rg_fankui);
+        final EditText etContent = feedbackll.findViewById(R.id.et_fankui_content);//文本框
+
+        rg_fankui.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, @IdRes int checked) {
+                RadioButton radioButton = rg_fankui.findViewById(checked);
+                department = radioButton.getText().toString();
+            }
+
+        });
+
+
+
+
+        new AlertDialog.Builder(MoreFragment.this.getActivity())
+                .setView(feedbackll)
+                .setPositiveButton("发送", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        String feedBackContent = etContent.getText().toString().trim();
+                        postFeedBackClien(feedBackContent, department);
+
+                    }
+                })
+                .setNegativeButton("取消",null)
+                .show();
+
+
+
+    }
+
+    /**
+     * 启用异步请求,发送反馈信息
+     *
+     *
+     * @param feedBackContent
+     * @param department
+     */
+    private void postFeedBackClien(String feedBackContent, String department) {
+        AsyncHttpClient client = new AsyncHttpClient();
+
+        String url = AppNetConfig.FEEDBACK;
+
+
+
+
+        RequestParams params = new RequestParams();
+        params.put("department",department);
+        params.put("content",feedBackContent);
+
+        client.post(url,params,new AsyncHttpResponseHandler(){
+            @Override
+            public void onSuccess(String content) {
+                UIUtils.toast("反馈成功!!",false);
+            }
+
+            @Override
+            public void onFailure(Throwable error, String content) {
+                UIUtils.toast("联网请求失败!!",false);
+            }
+        });
+
+
+    }
+
+
+    /**
+     * 联系客服
+     */
+    private void contactService() {
+
+        //1. 获取客服号码:
+        final String phone = tvMorePhone.getText().toString().trim();
+
+        //2. dialog
+
+        new AlertDialog.Builder(MoreFragment.this.getActivity())
+                .setMessage("拨打客服电话:" + phone)
+                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+
+                        //1. 使用隐式意图启动intent
+                        Intent intent = new Intent(Intent.ACTION_CALL);
+
+
+                        //2.
+                        intent.setData(Uri.parse("tel:" + phone));
+                        if (ActivityCompat.checkSelfPermission(MoreFragment.this.getActivity(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                            // TODO: Consider calling
+                            //    ActivityCompat#requestPermissions
+                            // here to request the missing permissions, and then overriding
+                            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                            //                                          int[] grantResults)
+                            // to handle the case where the user grants the permission. See the documentation
+                            // for ActivityCompat#requestPermissions for more details.
+                            return;
+                        }
+                        MoreFragment.this.getActivity().startActivity(intent);
+
+                    }
+                })
+                .setNegativeButton("取消",null)
+                .show();
+
+
+
+
+    }
+
+    /**
+     * 重置手势密码:
+     * 检查手势密码是否开启?
+     *   > 已开启: startActivity
+     *   > 未开启:toast
+     */
+    private void resetGesture() {
+        boolean checked = toggleMore.isChecked();
+
+        if(checked) {
+            BaseActivity base = (BaseActivity) this.getContext();
+            base.goToActivity(GestureEditActivity.class,null);
+
+        }else {
+            UIUtils.toast("手势密码功能未开启,请开启后设置",false);
+
+        }
+
     }
 
     /**

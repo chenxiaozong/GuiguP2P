@@ -987,6 +987,9 @@ int id btn_tixian 0x7f0e00a8
 int id btn_user_logout 0x7f0e00ab
 int id buttonPanel 0x7f0e005c
 int id cancel_action 0x7f0e00f4
+int id cb_fankui_invest 0x7f0e010d
+int id cb_fankui_tech 0x7f0e010c
+int id cb_fankui_zixun 0x7f0e010e
 int id center 0x7f0e002e
 int id center_crop 0x7f0e002f
 int id center_horizontal 0x7f0e0038
@@ -1019,6 +1022,7 @@ int id end_padder 0x7f0e0106
 int id enterAlways 0x7f0e0022
 int id enterAlwaysCollapsed 0x7f0e0023
 int id et_chongzhi 0x7f0e0087
+int id et_fankui_content 0x7f0e010f
 int id et_input_money 0x7f0e00a6
 int id et_login_number 0x7f0e009a
 int id et_login_pwd 0x7f0e009c
@@ -1076,7 +1080,7 @@ int id ll_touzi_zhiguan 0x7f0e00e3
 int id ll_zichan 0x7f0e00e4
 int id lock_indicator 0x7f0e008f
 int id lv_productlist 0x7f0e00e7
-int id masked 0x7f0e010c
+int id masked 0x7f0e0111
 int id matrix 0x7f0e0035
 int id media_actions 0x7f0e00f6
 int id middle 0x7f0e0048
@@ -1108,6 +1112,7 @@ int id progress_circular 0x7f0e0006
 int id progress_horizontal 0x7f0e0007
 int id radio 0x7f0e006e
 int id recharge 0x7f0e00e0
+int id rg_fankui 0x7f0e010b
 int id right 0x7f0e003d
 int id right_icon 0x7f0e00ff
 int id right_side 0x7f0e00fa
@@ -1208,7 +1213,7 @@ int id user_logo 0x7f0e0093
 int id view 0x7f0e0086
 int id view_offset_helper 0x7f0e000f
 int id viewpage_invest 0x7f0e00d3
-int id visible 0x7f0e010b
+int id visible 0x7f0e0110
 int id withText 0x7f0e004d
 int id withdraw 0x7f0e00e1
 int id wrap 0x7f0e0012
@@ -1314,6 +1319,7 @@ int layout select_dialog_multichoice_material 0x7f040052
 int layout select_dialog_singlechoice_material 0x7f040053
 int layout support_simple_spinner_dropdown_item 0x7f040054
 int layout top_title_main 0x7f040055
+int layout view_feedback 0x7f040056
 int mipmap ic_icon 0x7f030000
 int mipmap ic_launcher 0x7f030001
 int mipmap ic_launcher_round 0x7f030002

@@ -87,6 +87,7 @@ public class GestureVerifyActivity extends Activity implements View.OnClickListe
                         Toast.makeText(GestureVerifyActivity.this, "密码正确",Toast.LENGTH_SHORT).show();
 
                         GestureVerifyActivity.this.finish();
+
                     }
 
                     @Override

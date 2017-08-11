@@ -89,6 +89,10 @@ Multi-line Code
 ```
 
 ### [16.用户注册](markdown_note/readme_16.md)
+### [17.手势密码toggle](markdown_note/readme_17.md)
+### [18.重置手势密码](markdown_note/readme_18.md)
+### [19.联系客服](markdown_note/readme_19.md)
+### [20.用户反馈](markdown_note/readme_20.md)
 
 
 
