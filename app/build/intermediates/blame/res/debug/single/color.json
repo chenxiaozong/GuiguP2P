@@ -92,6 +92,10 @@
         "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/color/abc_tint_seek_thumb.xml"
     },
     {
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/color/gesture_cancel_text_color.xml",
+        "source": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/GestureLock/build/intermediates/bundles/default/res/color/gesture_cancel_text_color.xml"
+    },
+    {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/color/abc_tint_spinner.xml",
         "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/color/abc_tint_spinner.xml"
     }

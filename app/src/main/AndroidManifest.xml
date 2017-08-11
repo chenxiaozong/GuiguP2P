@@ -63,6 +63,10 @@
         <activity android:name=".activity.my.PieChartActivity" />
         <activity android:name=".activity.my.BarChartAcivity" />
         <activity android:name=".activity.more.UserRegisterActivity"></activity>
+
+        <!--手势密码的两个activity-->
+        <activity android:name=".activity.more.gesture.GestureEditActivity"/>
+        <activity android:name=".activity.more.gesture.GestureVerifyActivity"/>
     </application>
 
 </manifest>

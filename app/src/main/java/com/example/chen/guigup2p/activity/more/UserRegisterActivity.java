@@ -12,6 +12,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.example.chen.guigup2p.R;
 import com.example.chen.guigup2p.activity.BaseActivity;
 import com.example.chen.guigup2p.common.AppNetConfig;
+import com.example.chen.guigup2p.util.MD5Utils;
 import com.example.chen.guigup2p.util.UIUtils;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
@@ -88,8 +89,11 @@ public class UserRegisterActivity extends BaseActivity {
         String url = AppNetConfig.USERREGISTER;
         RequestParams params = new RequestParams();
         params.put("phone", phone);
+
+        //若不确定name 是否是utf-8编码格式
+        //name = new String(name.getBytes(),"UTF-8");
         params.put("name", name);
-        params.put("password", pwd2);
+        params.put("password", MD5Utils.MD5(pwd2));
 
 
         client.post(url, params, new AsyncHttpResponseHandler() {

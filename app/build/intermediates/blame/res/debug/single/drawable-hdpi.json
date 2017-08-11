@@ -16,12 +16,12 @@
         "source": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/res/drawable-hdpi/toggle_off.png"
     },
     {
-        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/drawable-hdpi/commom_top.png",
-        "source": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/res/drawable-hdpi/commom_top.png"
-    },
-    {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/drawable-hdpi/common_title_backgourd.png",
         "source": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/res/drawable-hdpi/common_title_backgourd.png"
+    },
+    {
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/drawable-hdpi/commom_top.png",
+        "source": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/res/drawable-hdpi/commom_top.png"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/drawable-hdpi/lock_title_bg.png",

@@ -20,6 +20,10 @@
         "source": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/ViewPagerIndicator/build/intermediates/bundles/default/res/drawable-hdpi-v4/vpi__tab_unselected_focused_holo.9.png"
     },
     {
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/lock_pattern_node_pressed.png",
+        "source": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/GestureLock/build/intermediates/bundles/default/res/drawable-hdpi-v4/lock_pattern_node_pressed.png"
+    },
+    {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_star_half_black_48dp.png",
         "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/drawable-hdpi-v4/abc_ic_star_half_black_48dp.png"
     },
@@ -46,6 +50,10 @@
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png",
         "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/drawable-hdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/gesture_node_normal.png",
+        "source": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/GestureLock/build/intermediates/bundles/default/res/drawable-hdpi-v4/gesture_node_normal.png"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_star_black_48dp.png",
@@ -92,8 +100,20 @@
         "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/drawable-hdpi-v4/abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/gesture_node_wrong.png",
+        "source": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/GestureLock/build/intermediates/bundles/default/res/drawable-hdpi-v4/gesture_node_wrong.png"
+    },
+    {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png",
         "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png"
+    },
+    {
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/gesture_node_pressed.png",
+        "source": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/GestureLock/build/intermediates/bundles/default/res/drawable-hdpi-v4/gesture_node_pressed.png"
+    },
+    {
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/btn_back_normal.png",
+        "source": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/GestureLock/build/intermediates/bundles/default/res/drawable-hdpi-v4/btn_back_normal.png"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_menu_share_mtrl_alpha.png",
@@ -180,6 +200,10 @@
         "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/drawable-hdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png"
     },
     {
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/lock_pattern_node_normal.png",
+        "source": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/GestureLock/build/intermediates/bundles/default/res/drawable-hdpi-v4/lock_pattern_node_normal.png"
+    },
+    {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/notification_bg_normal_pressed.9.png",
         "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png"
     },
@@ -190,6 +214,10 @@
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png",
         "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/drawable-hdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/btn_back_pressed.png",
+        "source": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/GestureLock/build/intermediates/bundles/default/res/drawable-hdpi-v4/btn_back_pressed.png"
     },
     {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_cab_background_top_mtrl_alpha.9.png",

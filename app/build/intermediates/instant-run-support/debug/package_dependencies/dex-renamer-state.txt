@@ -1,4 +1,4 @@
-#Thu Aug 10 10:06:07 CST 2017
+#Thu Aug 10 21:10:10 CST 2017
 file.2=/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_0ad333d3425f87b24c77af3769ce8b2ed01345b0/classes.dex
 base.2=/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_0ad333d3425f87b24c77af3769ce8b2ed01345b0
 file.1=/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_68da240e0aa64a9e15a28e1359844e5662cd8c8d/classes.dex

@@ -16,6 +16,10 @@
         "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/anim/abc_shrink_fade_out_from_bottom.xml"
     },
     {
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/anim/shake.xml",
+        "source": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/GestureLock/build/intermediates/bundles/default/res/anim/shake.xml"
+    },
+    {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
         "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/anim/abc_popup_enter.xml"
     },

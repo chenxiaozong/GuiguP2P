@@ -5,9 +5,7 @@ import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.media.AudioRecord;
 import android.os.Environment;
-import android.support.v4.app.FragmentActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
@@ -15,19 +13,18 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.example.chen.guigup2p.MainActivity;
 import com.example.chen.guigup2p.R;
 import com.example.chen.guigup2p.activity.BaseActivity;
 import com.example.chen.guigup2p.activity.ChongZhiActivity;
 import com.example.chen.guigup2p.activity.LoginActivity;
 import com.example.chen.guigup2p.activity.TiXianActivity;
 import com.example.chen.guigup2p.activity.UserInfoActivity;
+import com.example.chen.guigup2p.activity.more.gesture.GestureVerifyActivity;
 import com.example.chen.guigup2p.activity.my.BarChartAcivity;
 import com.example.chen.guigup2p.activity.my.LineChartActivity;
 import com.example.chen.guigup2p.activity.my.PieChartActivity;
 import com.example.chen.guigup2p.bean.User;
 import com.example.chen.guigup2p.util.BitmapUtils;
-import com.example.chen.guigup2p.util.UIUtils;
 import com.loopj.android.http.RequestParams;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Transformation;
@@ -148,7 +145,7 @@ public class MyFragment extends BaseFragment {
         SharedPreferences sp = this.getActivity().getSharedPreferences("user_info", Context.MODE_PRIVATE);
         String userName = sp.getString("name", "");
 
-        if (TextUtils.isEmpty(userName)) {
+        if (TextUtils.isEmpty(userName)) {//没有登录过
             //提示登录对话框
             doAlertLoginDialog();//弹出对话框提示登录并获取数据
 
@@ -161,7 +158,18 @@ public class MyFragment extends BaseFragment {
     private void doLoadingLocalUser() {
         BaseActivity mainActivity = (BaseActivity) getActivity();
         User user = mainActivity.readUser();//BaseActivity 抽象方法 readUser
+
+
+        //判断是否开启手势密码? 开启(输入手势密码 ):没开启(直接显示)
+        SharedPreferences setcretsp = this.getContext().getSharedPreferences("secret_protect", Context.MODE_PRIVATE);
+        boolean isOpen = setcretsp.getBoolean("isOpen", false);
         showUserInfo(user);
+
+        if(isOpen) {
+            BaseActivity baseActivity = (BaseActivity) this.getContext();
+            baseActivity.goToActivity(GestureVerifyActivity.class,null);
+            return;
+        }
     }
 
     /**
@@ -178,7 +186,7 @@ public class MyFragment extends BaseFragment {
 
         String imgurl = user.getImageurl();
 
-  //判断是否存在本地图像,存在则不需要联网加载,不存在则需要联网加载
+        //判断是否存在本地图像,存在则不需要联网加载,不存在则需要联网加载
 
         boolean isExist = readLocalIcon();
         if(isExist) {
@@ -277,7 +285,7 @@ public class MyFragment extends BaseFragment {
                         startLoginActivity();
                     }
                 })
-                .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+              /*  .setNegativeButton("取消", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         UIUtils.toast("取消登录",false);
@@ -287,8 +295,8 @@ public class MyFragment extends BaseFragment {
                         mainActivity.goToActivity(MainActivity.class,null);
 
                     }
-                })
-                //.setCancelable(false)
+                })*/
+                .setCancelable(false)
                 .show();
 
 

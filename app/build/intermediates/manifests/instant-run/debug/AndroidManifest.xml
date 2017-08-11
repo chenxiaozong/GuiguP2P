@@ -74,6 +74,10 @@
         <activity android:name="com.example.chen.guigup2p.activity.my.BarChartAcivity" />
         <activity android:name="com.example.chen.guigup2p.activity.more.UserRegisterActivity" />
 
+        <!-- 手势密码的两个activity -->
+        <activity android:name="com.example.chen.guigup2p.activity.more.gesture.GestureEditActivity" />
+        <activity android:name="com.example.chen.guigup2p.activity.more.gesture.GestureVerifyActivity" />
+
         <provider
             android:name="com.android.tools.fd.runtime.InstantRunContentProvider"
             android:authorities="com.example.chen.guigup2p.com.android.tools.fd.runtime.InstantRunContentProvider"
