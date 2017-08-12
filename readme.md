@@ -93,7 +93,15 @@ Multi-line Code
 ### [18.重置手势密码](markdown_note/readme_18.md)
 ### [19.联系客服](markdown_note/readme_19.md)
 ### [20.用户反馈](markdown_note/readme_20.md)
+### [21.分享](markdown_note/readme_21.md)
+### [22.关于](markdown_note/readme_22.md)
 
+
+
+
+# 5. 其它功能
+
+### [其它功能](markdown_note/readme_more.md)
 
 
 

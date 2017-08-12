@@ -34,6 +34,8 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
+
+
     <application
         android:name=".common.MyApplication"
         android:allowBackup="true"
@@ -54,7 +56,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.LoginActiivy" />
         <activity android:name=".activity.LoginActivity" />
         <activity android:name=".activity.UserInfoActivity" />
         <activity android:name=".activity.ChongZhiActivity" />
@@ -62,11 +63,12 @@
         <activity android:name=".activity.my.LineChartActivity" />
         <activity android:name=".activity.my.PieChartActivity" />
         <activity android:name=".activity.my.BarChartAcivity" />
-        <activity android:name=".activity.more.UserRegisterActivity"></activity>
+        <activity android:name=".activity.more.UserRegisterActivity" />
 
-        <!--手势密码的两个activity-->
-        <activity android:name=".activity.more.gesture.GestureEditActivity"/>
-        <activity android:name=".activity.more.gesture.GestureVerifyActivity"/>
+        <!-- 手势密码的两个activity -->
+        <activity android:name=".activity.more.gesture.GestureEditActivity" />
+        <activity android:name=".activity.more.gesture.GestureVerifyActivity" />
+        <activity android:name=".activity.more.AboutActivity"></activity>
     </application>
 
 </manifest>

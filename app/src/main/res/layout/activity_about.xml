@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/top_title_main"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="硅谷金融隶属于尚硅谷IT教育品牌"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:text="硅谷金融(www.atguigu.com)，系尚硅谷(中国)旗下独立运营品牌。“硅谷金融”是一家基于互联网技术为用户提供金融理财服务的专业化公司。"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:text="硅谷金融自2014年上线运营以来，得到用户的广泛信赖和一致好评。目前“硅谷金融”服务的用户覆盖全国30余个省市、自治区，成功帮助用户获得借款并让出借用户获得稳定的高收益。"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:text="硅谷金融拥有完善的管理制度、卓越的管理团队、标准的运作流程、严格的风控措施，为平台两端的用户提供咨询、评估、理财方案制定、协议管理等全方位的专业化微金融与财富管理咨询服务。"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:text="硅谷金融是以个人对个人小额借贷为主要模式，通过为出借人提供可靠、稳健、投资回报高的理财产品，为借款人提供快捷、便利、长期稳定的低成本资金撮合渠道，从而构建透明、便捷、平等的网络金融交易服务平台。硅谷金融受益于严格的个人金融风险定价体系和安全分散有保障的投资机制，借款人和出借人的权益均可得到充分的保障和满足。"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:text="在互联网金融蓬勃发展的今天，硅谷金融不断探索创新模式，致力于成为一家卓越的互联网金融企业，为个体金融、普惠金融发展添助力。"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
+
+
+
+
+

@@ -83,6 +83,15 @@
         <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/transforms/dex/debug/folders/1000/2/fastjson-1.2.4_d0995cdb46a6496f7dfcce79f6cc4d915607c412/classes.dex" />
     </item>
     <item
+        is-multidex="true"
+        jar="/Users/chen/.android/build-cache/92e1571f31f3f1a7dda7c95590c84261ff9d9238/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/GestureLock/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d43ff0965929a5c8e960c3e483de045d33a55496/classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/libs/android-async-http-master.jar"
         jumboMode="false"
@@ -99,15 +108,6 @@
         revision="26.0.0"
         sha1="7413c074c9edf523050267b93d0875151dc4b644">
         <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/pre-dexed/debug/alipaysecsdk_62ad21753d0fa310665a755e0dc141712ad4dd7c.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/chen/.android/build-cache/92e1571f31f3f1a7dda7c95590c84261ff9d9238/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.0"
-        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
-        <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/GestureLock/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d43ff0965929a5c8e960c3e483de045d33a55496/classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -178,7 +178,7 @@
         jumboMode="true"
         optimize="true"
         revision="26.0.0"
-        sha1="765ddec7e7d21d8336902ec15582f19df8f28310">
+        sha1="18b17652bd170639b65c0cfbec89b4fc7e1fc8b7">
         <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_6c4596862e10dd36e7ac4f21e63fef8950c1c1e4/classes.dex" />
     </item>
     <item

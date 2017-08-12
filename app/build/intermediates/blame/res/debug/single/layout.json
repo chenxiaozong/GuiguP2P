@@ -224,6 +224,10 @@
         "source": "/Users/chen/.android/build-cache/d334eda2ba50c28ba1622dcf22f1eedf19df9453/output/res/layout/abc_list_menu_item_checkbox.xml"
     },
     {
+        "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/layout/activity_about.xml",
+        "source": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/src/main/res/layout/activity_about.xml"
+    },
+    {
         "merged": "/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/res/merged/debug/layout/design_navigation_item_header.xml",
         "source": "/Users/chen/.android/build-cache/cc1c58d8448a4cb3b27659fd7837b9cc3cce5dfb/output/res/layout/design_navigation_item_header.xml"
     },

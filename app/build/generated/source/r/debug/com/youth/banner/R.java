@@ -49,7 +49,7 @@ public final class R {
         public static final int titleView = 0x7f0e00b5;
     }
     public static final class layout {
-        public static final int banner = 0x7f040027;
+        public static final int banner = 0x7f040028;
     }
     public static final class styleable {
         public static final int[] Banner = { 0x7f0100d2, 0x7f0100d3, 0x7f0100d4, 0x7f0100d5, 0x7f0100d6, 0x7f0100d7, 0x7f0100d8, 0x7f0100d9, 0x7f0100da, 0x7f0100db, 0x7f0100dc, 0x7f0100dd, 0x7f0100de };

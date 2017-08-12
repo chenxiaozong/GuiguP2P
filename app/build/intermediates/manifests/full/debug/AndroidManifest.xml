@@ -6,7 +6,7 @@
 
     <uses-sdk
         android:minSdkVersion="16"
-        android:targetSdkVersion="25" />
+        android:targetSdkVersion="23" />
 
     <!-- 软件相关权限 -->
     <!-- 配置所需权限 -->
@@ -64,7 +64,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.chen.guigup2p.activity.LoginActiivy" />
         <activity android:name="com.example.chen.guigup2p.activity.LoginActivity" />
         <activity android:name="com.example.chen.guigup2p.activity.UserInfoActivity" />
         <activity android:name="com.example.chen.guigup2p.activity.ChongZhiActivity" />
@@ -77,6 +76,7 @@
         <!-- 手势密码的两个activity -->
         <activity android:name="com.example.chen.guigup2p.activity.more.gesture.GestureEditActivity" />
         <activity android:name="com.example.chen.guigup2p.activity.more.gesture.GestureVerifyActivity" />
+        <activity android:name="com.example.chen.guigup2p.activity.more.AboutActivity" />
     </application>
 
 </manifest>

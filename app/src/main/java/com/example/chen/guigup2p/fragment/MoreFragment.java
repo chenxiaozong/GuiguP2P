@@ -25,6 +25,7 @@ import android.widget.ToggleButton;
 
 import com.example.chen.guigup2p.R;
 import com.example.chen.guigup2p.activity.BaseActivity;
+import com.example.chen.guigup2p.activity.more.AboutActivity;
 import com.example.chen.guigup2p.activity.more.UserRegisterActivity;
 import com.example.chen.guigup2p.activity.more.gesture.GestureEditActivity;
 import com.example.chen.guigup2p.common.AppNetConfig;
@@ -214,6 +215,7 @@ public class MoreFragment extends BaseFragment implements View.OnClickListener {
                 break;
             case R.id.tv_more_about:
                 Log.d("MoreFragment", "关于");
+                about();
                 break;
             case R.id.rl_more_contact:
                 Log.d("MoreFragment", "客服");
@@ -224,8 +226,25 @@ public class MoreFragment extends BaseFragment implements View.OnClickListener {
                 break;
             case R.id.tv_more_share:
                 Log.d("MoreFragment", "分享");
+                share();
                 break;
         }
+    }
+
+    /**
+     * 关于页面:
+     */
+    private void about() {
+        BaseActivity base = (BaseActivity) this.getContext();
+        base.goToActivity(AboutActivity.class,null);
+    }
+
+    /**
+     * 分享功能
+     */
+    private void share() {
+        UIUtils.toast("省略功能",false);
+
     }
 
     /**
