@@ -12,15 +12,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/chen/.android/build-cache/49a6a1123e9f65f3c00ea57c2bf3483d5bc515f0/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.0"
-        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
-        <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/GestureLock/build/intermediates/transforms/dex/debug/folders/1000/10/classes_077fd4989a0581dd12f918e2a2aa26fd065243e0/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/chen/.android/build-cache/b185fa6e069f3da99ddfc0a2c7edd8751d33b95d/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -30,21 +21,39 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/chen/.android/build-cache/92e1571f31f3f1a7dda7c95590c84261ff9d9238/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/GestureLock/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d43ff0965929a5c8e960c3e483de045d33a55496/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/chen/code/AndroidStudioProjects/GuiguP2P/ViewPagerIndicator/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="05269d17fdf13e04689571ac1ab7582ab25a744d">
+        <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/pre-dexed/debug/classes_9306c4a81e33e06ccb5ee4bb74e96f8f028f542c.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chen/.android/build-cache/49a6a1123e9f65f3c00ea57c2bf3483d5bc515f0/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/GestureLock/build/intermediates/transforms/dex/debug/folders/1000/10/classes_077fd4989a0581dd12f918e2a2aa26fd065243e0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/chen/code/AndroidStudioProjects/GuiguP2P/GestureLock/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="26.0.0"
         sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
         <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/GestureLock/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_16996f986772fdebf17ecaf3de392e904ce7f6b9/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/libs/alipayutdid.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.0"
-        sha1="4345fa0a5a7768f2f9c86aaab7db9e2906765193">
-        <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/transforms/dex/debug/folders/1000/2/alipayutdid_ae9680825291d6252c3782db7ff919f66cc755ac/classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -72,24 +81,6 @@
         revision="26.0.0"
         sha1="cf7f6fac57cbac0abbd6d7e88b8f84bb2aa40a59">
         <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/GestureLock/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_fce2b041777a10c348a695690573410cc78af27d/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/libs/fastjson-1.2.4.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.0"
-        sha1="fbcf8415e32859b473b336e5ac6422ee69b1185b">
-        <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/transforms/dex/debug/folders/1000/2/fastjson-1.2.4_d0995cdb46a6496f7dfcce79f6cc4d915607c412/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/chen/.android/build-cache/92e1571f31f3f1a7dda7c95590c84261ff9d9238/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.0"
-        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
-        <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/GestureLock/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d43ff0965929a5c8e960c3e483de045d33a55496/classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -138,30 +129,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/libs/android-async-http-master.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.0"
-        sha1="9f4e928be607675a16f5045ebac582d874692698">
-        <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/transforms/dex/debug/folders/1000/2/android-async-http-master_9429e9744a73d60e6097797ff06fc0988936784a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/chen/.android/build-cache/1e6b1d1f34d06cddf6bdc57653853e1e38f8fd61/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="26.0.0"
         sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
         <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/GestureLock/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1307607a3d86c4a723ab74a9c31c93feaa00c6f1/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.0"
-        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_9e9219b816bb4572f3ed09a0ca584d97eb53419c/classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -171,42 +144,6 @@
         revision="26.0.0"
         sha1="b40481f01537a329936ce54ee2fe15ef2537f010">
         <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/pre-dexed/debug/alipaysdk_bbed47b4273b150a13089d6c32a8c7cbd05be940.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.0"
-        sha1="18b17652bd170639b65c0cfbec89b4fc7e1fc8b7">
-        <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_6c4596862e10dd36e7ac4f21e63fef8950c1c1e4/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/libs/alipaysdk.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.0"
-        sha1="b40481f01537a329936ce54ee2fe15ef2537f010">
-        <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/transforms/dex/debug/folders/1000/2/alipaysdk_bbed47b4273b150a13089d6c32a8c7cbd05be940/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/libs/alipaysecsdk.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.0"
-        sha1="7413c074c9edf523050267b93d0875151dc4b644">
-        <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/transforms/dex/debug/folders/1000/2/alipaysecsdk_62ad21753d0fa310665a755e0dc141712ad4dd7c/classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/chen/code/AndroidStudioProjects/GuiguP2P/ViewPagerIndicator/build/intermediates/bundles/default/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="05269d17fdf13e04689571ac1ab7582ab25a744d">
-        <dex dex="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/pre-dexed/debug/classes_9306c4a81e33e06ccb5ee4bb74e96f8f028f542c.jar" />
     </item>
 
 </items>

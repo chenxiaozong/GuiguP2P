@@ -391,7 +391,7 @@ public class MyFragment extends BaseFragment {
      * 启动用户信息设置activity
      */
     private void startUserInfoAcrivity() {
-        BaseActivity mainActivity = (BaseActivity) getContext();
+        BaseActivity mainActivity = (BaseActivity) getActivity();
         mainActivity.goToActivity(UserInfoActivity.class,null);
 
     }

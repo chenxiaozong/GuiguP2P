@@ -57,6 +57,7 @@ public class SplashActivity extends Activity {
     private static final int VERSION_UPDATE_INFO = 3; //获取update info 成功
     private static final int APK_DOWNLOAD_SUCCESS = 4; //apk下载成功
     private static final int APK_DOWNLOAD_FAIL = 5; //APK 下载失败
+    private static final int GET_LATEST_VERSION_FAIL = 6;//获取updata info 失败
 
     @Bind(R.id.tv_splash_name)
     TextView tvSplashName;
@@ -171,6 +172,10 @@ public class SplashActivity extends Activity {
                     installApk();
                     //结束当前splash activity的显示
                     finish();
+                    break;
+                case GET_LATEST_VERSION_FAIL: //获取服务器应用版本失败
+                    toMain(3000);
+
                     break;
 
             }
@@ -452,7 +457,10 @@ public class SplashActivity extends Activity {
                     //"version": "1.2",
                     //        "apkUrl":"http://192.168.1.104:8080/P2PInvest/app_new.apk",
                     //        "desc":"解决一些bug, 优化网络请求!"
+                    Log.d("SplashActivity", content);
+
                     updateInfo = JSON.parseObject(content, UpdateInfo.class);
+
                     handler.sendEmptyMessage(VERSION_UPDATE_INFO);
 
                 }
@@ -463,6 +471,7 @@ public class SplashActivity extends Activity {
             @Override
             public void onFailure(Throwable error, String content) {
                 UIUtils.toast("请求服务器数据失败", false);
+                handler.sendEmptyMessage(GET_LATEST_VERSION_FAIL);
             }
         });
     }

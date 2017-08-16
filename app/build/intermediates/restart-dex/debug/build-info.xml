@@ -6,30 +6,31 @@
     density="mdpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1502516280490"
+    timestamp="1502859479885"
     token="-2651659708858268388"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="397" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="21" />
     <task
         name="verifier"
-        duration="0" />
+        duration="2" />
+
+    <artifact
+        location="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+        type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1502514616289"
+        timestamp="1502859249064"
         verifier="FULL_BUILD_REQUESTED" >
-        <artifact
-            location="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
-            type="SPLIT" />
         <artifact
             location="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/outputs/apk/app-debug.apk"
             type="SPLIT_MAIN" />
@@ -52,6 +53,9 @@
             location="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
+            location="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            type="SPLIT" />
+        <artifact
             location="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
         <artifact
@@ -66,23 +70,11 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1502515112130"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/outputs/apk/app-debug.apk"
-            type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1502515485895"
+        timestamp="1502859479885"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/chen/code/AndroidStudioProjects/GuiguP2P/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
     </build>
-    <build
-        build-mode="COLD"
-        timestamp="1502516280490"
-        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

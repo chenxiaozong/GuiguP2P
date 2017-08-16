@@ -12,16 +12,14 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.Environment;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
-import android.support.v4.graphics.BitmapCompat;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -32,20 +30,14 @@ import android.widget.Toast;
 import com.example.chen.guigup2p.MainActivity;
 import com.example.chen.guigup2p.R;
 import com.example.chen.guigup2p.bean.User;
-import com.example.chen.guigup2p.fragment.InvestFragment;
 import com.example.chen.guigup2p.util.BitmapUtils;
 import com.example.chen.guigup2p.util.UIUtils;
-import com.squareup.picasso.Picasso;
-import com.squareup.picasso.Transformation;
-
-import org.xmlpull.v1.XmlPullParser;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.security.PrivateKey;
 
 import butterknife.Bind;
 import butterknife.OnClick;
@@ -99,6 +91,7 @@ public class UserInfoActivity extends BaseActivity {
     @OnClick(R.id.iv_top_title_back)
     public void backClick(){
         this.finish();
+        //removeCurrentActivity();
     }
 
     //点击用户头像(更换头像文本)更换图片
